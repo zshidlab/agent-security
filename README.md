@@ -1,46 +1,44 @@
-# 毕业研究 PREP 索引
+# Vehicle-Agent-Security：OAPT 研究工作区
 
-版本：2.0.0；2026-10-09。当前任务见 [TASK](TASK.md)。此次为授权的独立准备，未运行模型/API、实现 Runtime 或开始后续实验。
+本目录保存面向工具型/车载智能体的多轮安全测试研究资料。当前研究主线是 Observation-guided Attack Path Transfer（OAPT）：从历史轨迹提取带证据的攻击路径，按照目标智能体的能力、权限、状态和可观察性约束生成测试输入，再依据受控执行反馈和独立证据判断阶段是否推进。
 
-| 交付物 | 内容和地位 |
-| --- | --- |
-| [AGENTS](AGENTS.md) | 当前权限和研究规范 v2 |
-| [现状审计](Current-State-Audit-v1.md) | 路径/符号、证据级别、Top-10 覆盖与缺口 |
-| [导师与路线映射](Advisor-Route-Mapping-v2.md) | O/RQ/D/G 逐项映射和重排理由 |
-| [通用架构与平台](Architecture-Platform-v1.md) | 核心/迁移、LangGraph 被测平台、两类非车载 Mock |
-| [凭据设计](Credential-Plan-v1.md) | 一次录入、跨终端复用；未读取 key |
-| [内容和结果协议](Outcome-Protocol-v1.md) | 独立标签、Oracle、合成配对案例 |
-| [比较与泛化协议](Experiment-Protocol-v1.md) | B0-B4、反馈控制、预算、分母/统计与门禁 |
-| [草案契约](drafts/contracts.v0.1.json) | 标签/状态/迁移/Trace 必需字段，不可直接部署 |
-| [manifest 草案](drafts/scenario-manifest.v0.1.json) | 合成示例、权限/状态/工具/预算与可见性 |
-| [风险/依赖/复现](Readiness-v1.md) | 决策、未核实项与 PREP 检查 |
-| [下次启动提示](Next-Session-Prompt.md) | 第一个可执行任务 R1，仅文档冻结 |
-| [旧规范](history/AGENTS.pre-PREP.2026-09-13.md) / [旧看板](history/TASK.pre-PREP.2026-09-13.md) | 原版历史和 D1/D2 DONE 证据 |
+## 工作区组织与隔离
 
-## 版本地位与勘误
+`agent-security/` 是三人项目的公共工作区，公共约束见 [AGENTS.md](AGENTS.md)。其中：
 
-导师 [研究计划](面向TDSC_USENIX_NDSS的车载智能体安全测试研究计划.docx) 为 2026-09-09 原始目标，正文/表格已只读提取；原文件未改。旧日期是历史排期；新看板按依赖门禁排序，不表示旧日期已兑现。
+- [szh/](szh/) 是 szh 成员的独立工作区；
+- [zzy/](zzy/) 是 zzy 成员的独立工作区；
+- [lhy/](lhy/) 是 lhy 成员的独立工作区。
 
-[Threat Model v1](Threat%20Model%20v1.md)、[Prior-art Matrix v1](Prior-art%20Matrix%20v1.md)、[Venue Requirement Matrix v1](Venue%20Requirement%20Matrix%20v1.md) 保留 D1/D2 历史成果。此次 v2/PREP 是补充/修订，未把新增泛化设计冒充 D1 已冻结内容。现行工作按以下说明处理：
+三个目录分别承载对应成员独立完成的任务、代码、数据、文档和证据。任何一个工作区中的智能体都无权修改其他成员工作区下的文件内容，包括代码、数据、配置、生成物以及其中的 `AGENTS.md`、`TASK.md` 和 README。必要的跨成员协作应通过明确授权的共享文件、只读报告、版本化接口或会议记录完成。
 
-1. v1 车载主体、vehicle_id 和 Gateway ID 仅用于车载映射；通用核心使用 principal/resource/environment_state，不要求访问旧 Demo。
-2. gold/expected_outcome 区分继续保留；旧 PASS/FAIL 是历史迁移术语，当前评测独立轴不能由 Runtime PASS 推导攻击成功。
-3. 危险调用分提议、尝试、阻断、实际效果；未执行不计状态违规。纯文本扩展须独立确定性证据，只计入声明的违规类。
-4. 原计划 FPR 文字定义实为发现误报占比，本次分别登记 FPR_benign 和 FDR_findings；MVR 仅相对于预注册参考违规集合，不能声称未知全部漏洞的真实漏检率。
-5. v1 关于其他项目的陈述是 2026-09-13 历史检查，本次未重读其他项目。文献比较不等于攻击复现；网页、价格和投稿日期未在线复核。
-6. 车载环境、6+ 模型/4 Agent、强基线、七类消融、独立 held-out、Artifact/论文和专利要求全部保留。通用 pilot 不能替代导师要求。
-7. Threat Model v1 的 INVALID “不计 ASR/MVR”只保留为旧条件分母口径；现行同时报告全部 assigned 的 ITT、预声明 eligible 和 invalid/unsupported 率。其 gateway_session_id/vehicle_id 强制项仅用于旧车载边界，不强加到通用纯文本事件。
+`agent-security/AGENTS.md` 对整个 `agent-security/` 目录及所有子工作区中的智能体生效。`szh/`、`zzy/`、`lhy/` 各自目录中的 `AGENTS.md`、`TASK.md` 和其他智能体相关文件，只约束在该目录内工作的智能体，不适用于其他成员工作区；这些局部规则必须在公共约束基础上执行，不能削弱公共隔离要求或替其他工作区增加任务。
 
-contracts 和 manifest 均 draft/unfrozen。语法/引用检查不代表已实现或已完成实验预注册。未来冻结或修订需另记版本、理由和比较影响。
+工作由三部分组成：A 负责攻击样本生成和迁移算法；B 负责测试平台、工具沙箱、权限策略、状态重置和执行见证；C 负责 STAC、AutoDojo、GAP、RACE 等基线复现、Gold 审计和统计比较。A/B/C 最新个人计划分别是十周、五十个工作日的独立交付；统一方案另有十三周（含整合）路线，排期差异记录在进度工作簿中，待导师确认后再统一。
 
+## 目录
 
+- [AGENTS.md](AGENTS.md)：整个 `agent-security/` 工作区的公共约束、工作区隔离、文件所有权和协作规则。
+- [szh/](szh/)、[zzy/](zzy/)、[lhy/](lhy/)：三个成员的独立工作区；各目录中的智能体规则仅在对应目录内生效。
+- [szh/TASK.md](szh/TASK.md)：分级任务、A 的五十日交付、边界、接口和验收记录。
+- [szh/AGENTS.md](szh/AGENTS.md)：会话权限、证据等级、安全不变量和复现规则。
+- [OAPT 研究方案进度管理_三人员分表与总览甘特图.xlsx](OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx)：A/B/C 个人分表、D1–D50 甘特图、总览、统一十三周路线、来源索引和每周两次讨论节点。
+- [agent-test-platform/](agent-test-platform/)：当前工作区中的 Python 标准库测试平台代码，包括隔离 Mock、事件记录、样本适配器和 provider wiring。其历史 fixture 检查不能替代真实模型或正式攻击有效性验证。
+- [szh/docs/](szh/docs/)：威胁模型、架构、判定、比较和投稿要求等研究文档。
+- [references/](references/)：用于相关工作和方法边界分析的持久化文献库。
 
+数据生成工程位于工作区根目录的 [`data-generation`](../data-generation)，本目录不复制或修改它。现有管线使用版本化工具池、授权和策略，在进程内 `local_simulation` 执行并写出 samples/trajectories；`gold` 是生成目标，`expected_outcome` 是静态预期。它们可作为 A 的数据结构和 fixture 输入，不能直接作为真实攻击成功、真实防护 verdict 或形式化证明。
 
+## 研究边界与安全原则
 
-## 2026-10-12更新
+主轨道是授权的低信任文本间接提示注入。测试输入限于合成文档、网页或工具响应，不能修改系统提示、真实身份、权限数据库、可信 Oracle、生产数据或真实车辆。所有潜在状态改变都在 Mock/数字孪生环境中进行；不连接真实车辆、CAN/ECU、外部账号或生产服务。
 
-[TASK v3](TASK.md)按分类、层级、时间、依赖和交付物安排，新增I2后的V1真实攻击验证。history全文已整合入对应AGENTS/TASK，原归档保留。下一任务R1，其后I1→I2→V1；未启动实现。
+安全结论需要工具调用、参数、权限/策略结果、确认状态或状态增量等 Hard Observable。模型自述、攻击意图、`gold`、静态 `expected_outcome` 和 LLM-as-Judge 只能作为候选或辅助信息。`Unknown`、`Incompatible`、`Blocked`、`Attempted` 和 `Violated` 分开记录，缺少证据时不推断为成功或安全。
 
-## 2026-10-13 工程交付
+A 的生成数据同时设计为测试输入和形式化验证输入：每步保存 `Pre`、`Invariant`、`Observe`、`Post`、证据引用、状态差分和 Schema 版本。验证器检查权限、工具 Schema、状态前置条件、确认顺序、证据完整性、预算和失败关闭条件；验证输出再反馈生成器。该闭环受可信执行接口和 Oracle 条件限制，不宣称目标智能体全局安全。
 
-已新增 [通用平台](platform/)、[攻击测试入口](platform/attack_test.py)、[样本适配器](platform/sample_adapter.py) 和 [使用手册](使用手册.md)。平台提供 S-DOC/S-EXP 隔离 Mock、可信事件记录、独立 Oracle、DeepSeek provider wiring 和 Direct Agent；离线 fixture 已通过 4 项测试。真实 API、样本读取和正式 V1 pilot 仍按 TASK 的 I2/V1 门禁执行。
+## 进度和协作
+
+每周安排一次周三或周四（二选一）讨论和一次周日复盘，讨论进度、问题、证据和下一步。会议不替代个人计划的独立交付。具体姓名、日历起始日期、正式时段、模型、预算和实验结果在来源未提供前保持待确认。生成器、平台和原始研究计划属于只读输入，修改范围以任务授权为准。
+
+本工作区当前记录的是研究设计、文档和离线/模拟基础设施；真实模型 API、真实车辆和正式主实验是否可用，必须以后续阶段的实际命令、环境和证据为准。不得将计划规模、文献数值、历史 fixture 通过或模拟轨迹改写成项目成果。
