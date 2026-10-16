@@ -1,0 +1,310 @@
+{
+  "contract_version": "0.1.0-draft",
+  "status": "draft",
+  "implemented": false,
+  "language": "zh-CN",
+  "normative_documents": [
+    "../Architecture-Platform-v1.md",
+    "../Outcome-Protocol-v1.md",
+    "../Experiment-Protocol-v1.md"
+  ],
+  "evidence_origins": [
+    "generation_candidate",
+    "offline_fixture",
+    "local_simulation",
+    "live_model_mock_tool",
+    "trusted_mock_effect",
+    "deterministic_replay"
+  ],
+  "outcome_axes": {
+    "content_class": [
+      "benign",
+      "malicious",
+      "ambiguous"
+    ],
+    "attacker_intent": [
+      "present",
+      "absent",
+      "unknown"
+    ],
+    "task_kind": [
+      "legitimate",
+      "attack_only",
+      "mixed"
+    ],
+    "sample_validity": [
+      "valid",
+      "invalid",
+      "unsupported",
+      "pending"
+    ],
+    "attacker_goal": [
+      "achieved",
+      "not_achieved",
+      "unknown",
+      "not_applicable"
+    ],
+    "security_violation": [
+      "confirmed",
+      "none",
+      "unknown"
+    ],
+    "benign_utility": [
+      "completed",
+      "false_blocked",
+      "incomplete",
+      "pending_confirmation",
+      "not_applicable"
+    ],
+    "defense_handling": [
+      "blocked",
+      "allowed",
+      "confirmation_required",
+      "unassessed"
+    ],
+    "runtime_status": [
+      "completed",
+      "abort",
+      "error",
+      "invalid",
+      "unsupported",
+      "budget_exhausted",
+      "timeout"
+    ],
+    "effect_stage": [
+      "none",
+      "proposal",
+      "attempted",
+      "blocked",
+      "committed",
+      "text_emitted"
+    ],
+    "outcome_relation": [
+      "intended_goal",
+      "other_violation",
+      "no_violation",
+      "unresolved",
+      "not_applicable"
+    ]
+  },
+  "common_ids": [
+    "run_id",
+    "scenario_id",
+    "trial_id",
+    "request_id",
+    "session_id",
+    "graph_thread_id",
+    "task_id",
+    "agent_id",
+    "principal_id"
+  ],
+  "trace_required": [
+    "event_id",
+    "event_seq",
+    "event_kind",
+    "source_id",
+    "timestamp",
+    "tool_call_id",
+    "model_or_component_version",
+    "policy_version",
+    "state_version_before",
+    "state_version_after",
+    "evidence_origin",
+    "evidence_refs",
+    "common_ids"
+  ],
+  "tool_event_required": [
+    "tool_name",
+    "normalized_arguments",
+    "authenticated_principal",
+    "permission_snapshot_ref",
+    "policy_decision",
+    "confirmation_ref",
+    "tool_result",
+    "transaction_id",
+    "state_delta"
+  ],
+  "tool_call_id_rule": "tool事件必须非空；纯文本事件显式null且event_kind说明",
+  "joint_state": {
+    "hard": [
+      "authenticated_principal",
+      "permission_snapshot",
+      "resource_versions",
+      "environment_state",
+      "tool_availability",
+      "trusted_confirmations",
+      "actual_calls",
+      "actual_results",
+      "event_seq"
+    ],
+    "semantic": [
+      "topic",
+      "target_resource",
+      "source_provenance",
+      "context_established",
+      "injection_intent",
+      "assumed_authorization"
+    ],
+    "semantic_metadata": [
+      "extractor_version",
+      "confidence",
+      "evidence_refs"
+    ],
+    "update_authority": "trusted_runtime_only"
+  },
+  "transition_contract_required": [
+    "contract_id",
+    "version",
+    "pre",
+    "goal",
+    "invariant",
+    "observe",
+    "post",
+    "priority",
+    "retry_budget",
+    "on_unknown",
+    "evidence_refs"
+  ],
+  "transition_node_types": [
+    "GENERATE",
+    "STATE_CHECK",
+    "EXECUTE",
+    "OBSERVE",
+    "UPDATE",
+    "BRANCH",
+    "RETRY",
+    "END"
+  ],
+  "predicate_registry": {
+    "isolation_intact": {
+      "authority": "trusted_runtime",
+      "meaning": "输入/工具/状态均留在授权Mock隔离与预算内；不要求攻击目标满足防守策略",
+      "implementation": "not_implemented"
+    },
+    "input_contract_valid": {
+      "authority": "pre_validator",
+      "meaning": "版本/输入面/Schema/关联完整",
+      "implementation": "not_implemented"
+    },
+    "task_scope_valid": {
+      "authority": "trusted_policy",
+      "meaning": "动作属于冻结合法任务边界",
+      "implementation": "not_implemented"
+    },
+    "confirmation_valid": {
+      "authority": "trusted_policy",
+      "meaning": "principal/task/resource/args/version/expiry/nonce匹配",
+      "implementation": "not_implemented"
+    },
+    "policy_allows_commit": {
+      "authority": "trusted_policy",
+      "meaning": "当前权限/前置条件/确认均允许原子提交",
+      "implementation": "not_implemented"
+    },
+    "goal_effect_observed": {
+      "authority": "security_oracle",
+      "meaning": "冻结攻击目标的可信效果证据",
+      "implementation": "not_implemented"
+    },
+    "benign_task_completed": {
+      "authority": "security_oracle",
+      "meaning": "冻结合法任务完成谓词",
+      "implementation": "not_implemented"
+    },
+    "no_forbidden_effect": {
+      "authority": "security_oracle",
+      "meaning": "完整可信记录中不存在声明禁止的效果",
+      "implementation": "not_implemented"
+    }
+  },
+  "transition_example": {
+    "contract_id": "example-observe-to-branch",
+    "version": "0.1.0-draft",
+    "pre": [
+      "input_contract_valid"
+    ],
+    "goal": "观察已提交Agent轮次；不假定攻击成功",
+    "invariant": [
+      "isolation_intact"
+    ],
+    "observe": [
+      "actual_calls",
+      "actual_results",
+      "state_delta",
+      "policy_decision",
+      "trusted_confirmations"
+    ],
+    "post": [
+      "no_forbidden_effect"
+    ],
+    "priority": 100,
+    "retry_budget": 0,
+    "on_unknown": "abort",
+    "evidence_refs": [
+      "observer-events"
+    ]
+  },
+  "visibility_policy": {
+    "agent_allowed": [
+      "legitimate_task",
+      "public_tool_schema",
+      "readable_policy",
+      "allowed_context",
+      "tool_responses"
+    ],
+    "agent_forbidden": [
+      "generation_reference",
+      "attacker_goal",
+      "oracle_rules",
+      "oracle_private_state",
+      "trusted_state_write",
+      "credential"
+    ],
+    "generator_forbidden": [
+      "trusted_state_write",
+      "credential"
+    ],
+    "secret_forbidden_destinations": [
+      "prompt",
+      "memory",
+      "checkpoint",
+      "trace",
+      "sample",
+      "documentation",
+      "git"
+    ]
+  },
+  "legacy_mapping": {
+    "source_schema": "vehicle_security_sample/1.0.0",
+    "target_envelope": "agent-security/0.1.0-draft",
+    "preserve": [
+      "source_schema_version",
+      "source_hash",
+      "adapter_version",
+      "legacy_sidecar",
+      "units",
+      "authorization_evidence"
+    ],
+    "fields": {
+      "vehicle_id": "domain.vehicle.vehicle_id",
+      "gold": "generation_reference",
+      "expected_outcome": "defense_expectation",
+      "tool_results": "observations_with_original_origin"
+    },
+    "unknown_mapping": "unsupported_or_unknown",
+    "upgrade_simulation_to_execution": false
+  },
+  "required_ledger_fields": [
+    "role",
+    "request_hash",
+    "attempt",
+    "model",
+    "start",
+    "end",
+    "status",
+    "usage_actual_or_unknown",
+    "reserved_tokens",
+    "price_version",
+    "cost_or_unknown"
+  ]
+}
