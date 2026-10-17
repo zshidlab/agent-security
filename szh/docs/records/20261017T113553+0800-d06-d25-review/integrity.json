@@ -1,0 +1,404 @@
+{
+  "schema_version": "review-integrity-1.0",
+  "timestamp": "2026-10-17T11:40:17.620466+08:00",
+  "scope": "D06-D25 review; snapshot of formal workbook, not a second progress authority",
+  "workbook_sha256_unchanged": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+  "status_counts": {
+    "已完成": 18,
+    "阻塞": 2
+  },
+  "days": [
+    {
+      "day": "D06",
+      "excel_row": 10,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/data/历史来源清单.csv",
+        "T": "records/D06/20261017T032626+0800-first; checks.md; command-*.json",
+        "U": "仅AgentLAB公开合成基准轨迹，44来源组；未重跑基线；工具消息无独立状态witness，effect/violated Unknown；B/C接口未改。前次records/D06/20261017T032328+0800-first保留。"
+      },
+      "latest_record": "records/D06/20261017T032626+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 4,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D07",
+      "excel_row": 11,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/data/筛选结果.csv",
+        "T": "records/D07/20261017T032704+0800-first; checks.md; command-*.json",
+        "U": "公开基准合成轨迹；不完整与重复另存incomplete-reference.jsonl并回指原文件；组归并保守，未宣称案例独立或真实效果。"
+      },
+      "latest_record": "records/D07/20261017T032704+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D08",
+      "excel_row": 12,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/data/人工示范图.jsonl",
+        "T": "records/D08/20261017T032801+0800-first; checks.md; command-*.json",
+        "U": "单一 Codex 标注者，非独立人类金标；历史文本 effect/violated Unknown；本地研究接口不改 B/C。"
+      },
+      "latest_record": "records/D08/20261017T032801+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D09",
+      "excel_row": 13,
+      "O_U": {
+        "O": "阻塞",
+        "P": 75,
+        "Q": "2026-10-17",
+        "R": "",
+        "S": "algorithm/说明/如何划分步骤.md; algorithm/data/标注自查.jsonl",
+        "T": "records/D09/20261017T033233+0800-first; checks.md; command-*.json",
+        "U": "2026-10-17 发现真实时间门槛：首次标注后至少24小时再独立重标五条并记录差异方可解除；无双人一致性。后续可独立离线部分继续，B/C接口不变。"
+      },
+      "latest_record": "records/D09/20261017T033233+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D10",
+      "excel_row": 14,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/data/开发集.jsonl; algorithm/data/留出集.jsonl; algorithm/data/split-manifest.json",
+        "T": "records/D10/20261017T033303+0800-first; checks.md; command-*.json",
+        "U": "D09重标待24小时；开发池含所有已查看/已标组，20条标记工作子集，设计澄清已同步日文档和manifest；工具可交叉，path隔离未证实。B/C接口不变。"
+      },
+      "latest_record": "records/D10/20261017T033303+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D11",
+      "excel_row": 15,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/parse_trace.py",
+        "T": "records/D11/20261017T033607+0800-first; checks.md; command-*.json",
+        "U": "修复首跑null列表错误，前次失败见20261017T033441+0800-first；D09隔日复查未完成；本地解析独立验收，B/C接口不变。"
+      },
+      "latest_record": "records/D11/20261017T033607+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D12",
+      "excel_row": 16,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/rule_extract.py",
+        "T": "records/D12/20261017T033545+0800-first; checks.md; command-*.json",
+        "U": "D12开始登记早于D11修复结束，实际实现与验收在D11重跑完成后进行；D09复查待定，历史轨迹效果Unknown。B/C不变。"
+      },
+      "latest_record": "records/D12/20261017T033545+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D13",
+      "excel_row": 17,
+      "O_U": {
+        "O": "阻塞",
+        "P": 75,
+        "Q": "2026-10-17",
+        "R": "",
+        "S": "algorithm/src/model_extract.py; algorithm/data/model-replies-fixture.jsonl",
+        "T": "records/D13/20261017T033733+0800-first; checks.md; command-*.json",
+        "U": "2026-10-17发现：当前禁止凭据访问，尚无明确授权的兼容真实模型运行方式；解除需获该方式授权并真实运行20条、保存调用证据。fixture仅控制流；D09隔日复查待完成，B/C不变。"
+      },
+      "latest_record": "records/D13/20261017T033733+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D14",
+      "excel_row": 18,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/check_graph.py",
+        "T": "records/D14/20261017T033837+0800-first; checks.md; command-*.json",
+        "U": "D13真实模型未调用，模型回复图仅fixture；D14检查器本地行为已独立验收，不代表抽取质量；D09复查待完成。B/C接口不变。"
+      },
+      "latest_record": "records/D14/20261017T033837+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D15",
+      "excel_row": 19,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/results/图抽取初测.csv; algorithm/src/evaluate_graph.py",
+        "T": "records/D15/20261017T034007+0800-first; checks.md; command-*.json",
+        "U": "单人开发参考且D09重标待完成；D13真实模型未调用；仅规则初测，不证明模型质量或泛化。B/C接口不变。"
+      },
+      "latest_record": "records/D15/20261017T034007+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D16",
+      "excel_row": 20,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/data/目标能力.json; algorithm/schemas/capability.schema.json",
+        "T": "records/D16/20261017T034048+0800-first; checks.md; command-*.json",
+        "U": "D04读取函数无主体鉴权，确认顺序未实现，时间仅非空字符串，均如实声明；仅合成本地状态。D09/D13条件仍待完成。B/C接口不变。"
+      },
+      "latest_record": "records/D16/20261017T034048+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 4,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D17",
+      "excel_row": 21,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/match_target.py",
+        "T": "records/D17/20261017T034215+0800-first; checks.md; command-*.json",
+        "U": "硬约束匹配已独立本地验证；相似度仅简单词项代理，无质量结论；D09/D13待完成，不修改B/C接口。"
+      },
+      "latest_record": "records/D17/20261017T034215+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D18",
+      "excel_row": 22,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/build_step_table.py; algorithm/schemas/testplan.schema.json",
+        "T": "records/D18/20261017T034611+0800-first; checks.md; command-*.json",
+        "U": "关联首失败run 20261017T034439+0800-first；编译时显式绑定默认subject修复参数比较。仅合成兼容路径，未将历史工具擅自映射；D09/D13缺口持续，无B/C接口改变。"
+      },
+      "latest_record": "records/D18/20261017T034611+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D19",
+      "excel_row": 23,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/data/阶段判断示例.jsonl",
+        "T": "records/D19/20261017T034724+0800-first; checks.md; command-*.json",
+        "U": "单人合成教学参考非独立人类gold；静态预期不作攻击效果证明；D09/D13缺口持续，B/C接口无变化。"
+      },
+      "latest_record": "records/D19/20261017T034724+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D20",
+      "excel_row": 24,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/check_step.py",
+        "T": "records/D20/20261017T034843+0800-first; checks.md; command-*.json",
+        "U": "三值判断只由同一调用的完整本地观察支持；Unknown不等于Safe；D09/D13缺口保留，未修改B/C接口。"
+      },
+      "latest_record": "records/D20/20261017T034843+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D21",
+      "excel_row": 25,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/generate_one_step.py",
+        "T": "records/D21/20261017T034955+0800-first; checks.md; command-*.json",
+        "U": "依日文档使用固定回复，真实模型调用0，只验证单步生成与控制面；D13真实模型验收缺口不由本日补足；D09待隔日；无B/C接口修改。"
+      },
+      "latest_record": "records/D21/20261017T034955+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D22",
+      "excel_row": 26,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/run_local_pipeline.py; algorithm/examples/local-cases.jsonl",
+        "T": "records/D22/20261017T035147+0800-first; checks.md; command-*.json",
+        "U": "目标是显式固定文本策略，拒绝目标为独立RefusingExecutor合成fixture；不推断真实模型攻击效果。D09/D13缺口持续；无B/C接口变化。"
+      },
+      "latest_record": "records/D22/20261017T035147+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D23",
+      "excel_row": 27,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/retry_policy.py",
+        "T": "records/D23/20261017T035342+0800-first; checks.md; command-*.json",
+        "U": "超时为本地适配器抛出TimeoutError的确定性故障测试，不宣称可强制中断任意阻塞外部调用；仅固定策略本地状态。D09/D13缺口持续，无B/C接口修改。"
+      },
+      "latest_record": "records/D23/20261017T035342+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D24",
+      "excel_row": 28,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/src/budget.py",
+        "T": "records/D24/20261017T035657+0800-first; checks.md; command-*.json",
+        "U": "关联首失败20261017T035552+0800-first；统一CLI模块身份修复异常捕获。D23可选meter/reset兼容原行为，跨步状态保留；模拟费用非美元，耗时仅调用前门禁。D09/D13缺口持续；无B/C接口修改。"
+      },
+      "latest_record": "records/D24/20261017T035657+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 5,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    },
+    {
+      "day": "D25",
+      "excel_row": 29,
+      "O_U": {
+        "O": "已完成",
+        "P": 100,
+        "Q": "2026-10-17",
+        "R": "2026-10-17",
+        "S": "algorithm/release/演示版/",
+        "T": "records/D25/20261017T040057+0800-first; checks.md; command-*.json",
+        "U": "D25本地演示日验收完成，真实模型调用0；D09仍75%等待真实24h重标，D13仍75%待兼容真实模型20输入实测。失败包分别保留于先前两个D25 run；非真实攻击成功率，未清洁安装、无B/C接口变化。本次停止D25，不启动D26。"
+      },
+      "latest_record": "records/D25/20261017T040057+0800-first",
+      "saved_reopened_values_equal": true,
+      "latest_command_count": 11,
+      "latest_commands_all_exit_zero": true,
+      "structure_deliverables_check": "passed"
+    }
+  ],
+  "current_deliverables_differing_from_daily_hash": [
+    {
+      "day": "D23",
+      "path": "algorithm/src/retry_policy.py",
+      "recorded_sha256": "d0594b6e907567fe1f3596ba194580eda5f68dbe2ee58ce24b8f7870f5edc006",
+      "current_sha256": "13104f3687ab58bb951e92aaa93e5b2b39f6e5da6310363472af324b9d99065e"
+    }
+  ],
+  "git_check_ignore": {
+    "argv": [
+      "git",
+      "check-ignore",
+      "--stdin"
+    ],
+    "formal_and_review_files_probed": 52,
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": ""
+  },
+  "annotation_review_keys": [
+    "annotated_at",
+    "author",
+    "differences",
+    "graph",
+    "schema_version",
+    "second_annotation",
+    "source_graph_sha256",
+    "source_id",
+    "status"
+  ],
+  "annotation_review_count": 5,
+  "limitations": "Checks saved progress/provenance and file integrity; behavioral acceptance is assessed separately."
+}

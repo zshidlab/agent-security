@@ -1,0 +1,26 @@
+{
+  "started": "2026-10-17T11:41:47.982903+08:00",
+  "finished": "2026-10-17T11:41:48.348696+08:00",
+  "purpose": "D06-D25 review only",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-I",
+    "-B",
+    "docs/records/20261017T113553+0800-d06-d25-review/frozen_integration_probe.py"
+  ],
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "{\"schema_version\": \"frozen-integration-review-1.0\", \"timestamp\": \"2026-10-17T11:41:48.328828+08:00\", \"scope\": \"Frozen local_mock package; synthetic state only; no model call\", \"module_paths\": {\"budget\": \"E:\\\\Vehicle-Agent-Security\\\\agent-security\\\\szh\\\\algorithm\\\\release\\\\演示版\\\\src\\\\budget.py\", \"build_step_table\": \"E:\\\\Vehicle-Agent-Security\\\\agent-security\\\\szh\\\\algorithm\\\\release\\\\演示版\\\\src\\\\build_step_table.py\", \"check_step\": \"E:\\\\Vehicle-Agent-Security\\\\agent-security\\\\szh\\\\algorithm\\\\release\\\\演示版\\\\src\\\\check_step.py\", \"match_target\": \"E:\\\\Vehicle-Agent-Security\\\\agent-security\\\\szh\\\\algorithm\\\\release\\\\演示版\\\\src\\\\match_target.py\", \"retry_policy\": \"E:\\\\Vehicle-Agent-Security\\\\agent-security\\\\szh\\\\algorithm\\\\release\\\\演示版\\\\src\\\\retry_policy.py\", \"run_local_pipeline\": \"E:\\\\Vehicle-Agent-Security\\\\agent-security\\\\szh\\\\algorithm\\\\release\\\\演示版\\\\src\\\\run_local_pipeline.py\"}, \"plan_budget\": {\"required_max_calls\": 2, \"actual_target_calls\": 4, \"actual_stop\": \"path_completed\", \"acceptance_passed\": false}, \"visible_history\": {\"generation_calls\": 2, \"budgeted_second_step_history\": [], \"local_second_step_history\": [{\"event_id\": \"local-99376cabf8dc44f9832dcab1c944e7d7:visible1\", \"role\": \"tool\", \"text\": \"本地调用完成；效果由独立观察检查。\"}], \"budgeted_stop\": \"path_completed\", \"acceptance_passed\": false}, \"runtime_pre\": {\"second_pre_requires\": \"2026-10-23T10:00:00+08:00\", \"second_actual_before\": \"2026-10-23T14:00:00+08:00\", \"second_actual_after\": \"2026-10-23T16:00:00+08:00\", \"second_judgment\": {\"schema_version\": \"step-judgment-1.0\", \"test_id\": \"frozen-review-pre\", \"task_id\": \"frozen-review-task\", \"step_id\": \"frozen-review:n1\", \"path_id\": \"synthetic:p0\", \"call_id\": \"budgeted-65ebb006018d4d91b5bce27b135832a2:2:call1\", \"value\": \"Unknown\", \"decision\": \"暂不能确定\", \"evidence_refs\": [\"budgeted-65ebb006018d4d91b5bce27b135832a2:2:e1:o1\"], \"ignored_evidence_refs\": [], \"missing_fields\": [\"Pre\"], \"reason\": \"前置状态冲突。\", \"advance\": false, \"state_versions\": {\"before\": \"76e87910af22f3646dd213070070482abdf57bea604af7eb1ddfa99617db3556\", \"after\": \"144abee2e10f7cef40fd0f640482205b06e4fec00fd3e25c0c0d32c84a34977d\"}, \"axes\": {\"request\": \"observed\", \"attempt\": \"Unknown\", \"blocked\": \"Unknown\", \"effect\": \"Unknown\", \"violated\": \"Unknown\"}}, \"acceptance_passed\": false}}\n",
+  "stderr": "",
+  "protected_before_sha256": {
+    "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+    "E:\\Vehicle-Agent-Security\\agent-security\\szh\\docs\\prompt.md": "7e7f0f0d887610f77576fe104e59b794e56cf230b8b2c689ab9484b0c869c45c"
+  },
+  "protected_after_sha256": {
+    "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+    "E:\\Vehicle-Agent-Security\\agent-security\\szh\\docs\\prompt.md": "7e7f0f0d887610f77576fe104e59b794e56cf230b8b2c689ab9484b0c869c45c"
+  },
+  "protected_unchanged": true
+}

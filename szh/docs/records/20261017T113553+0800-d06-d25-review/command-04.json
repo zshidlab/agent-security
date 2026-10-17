@@ -1,0 +1,25 @@
+{
+  "started": "2026-10-17T11:40:16.155039+08:00",
+  "finished": "2026-10-17T11:40:17.634378+08:00",
+  "purpose": "D06-D25 review only",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "docs/records/20261017T113553+0800-d06-d25-review/integrity_review.py"
+  ],
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "{\"status_counts\": {\"已完成\": 18, \"阻塞\": 2}, \"daily_output_hash_drift\": [{\"day\": \"D23\", \"path\": \"algorithm/src/retry_policy.py\", \"recorded_sha256\": \"d0594b6e907567fe1f3596ba194580eda5f68dbe2ee58ce24b8f7870f5edc006\", \"current_sha256\": \"13104f3687ab58bb951e92aaa93e5b2b39f6e5da6310363472af324b9d99065e\"}], \"formal_and_review_files_not_ignored\": 52, \"workbook_unchanged\": true}\n{\"day\": \"D09\", \"O_U\": {\"O\": \"阻塞\", \"P\": 75, \"Q\": \"2026-10-17\", \"R\": \"\", \"S\": \"algorithm/说明/如何划分步骤.md; algorithm/data/标注自查.jsonl\", \"T\": \"records/D09/20261017T033233+0800-first; checks.md; command-*.json\", \"U\": \"2026-10-17 发现真实时间门槛：首次标注后至少24小时再独立重标五条并记录差异方可解除；无双人一致性。后续可独立离线部分继续，B/C接口不变。\"}}\n{\"day\": \"D13\", \"O_U\": {\"O\": \"阻塞\", \"P\": 75, \"Q\": \"2026-10-17\", \"R\": \"\", \"S\": \"algorithm/src/model_extract.py; algorithm/data/model-replies-fixture.jsonl\", \"T\": \"records/D13/20261017T033733+0800-first; checks.md; command-*.json\", \"U\": \"2026-10-17发现：当前禁止凭据访问，尚无明确授权的兼容真实模型运行方式；解除需获该方式授权并真实运行20条、保存调用证据。fixture仅控制流；D09隔日复查待完成，B/C不变。\"}}\n",
+  "stderr": "",
+  "protected_before_sha256": {
+    "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+    "E:\\Vehicle-Agent-Security\\agent-security\\szh\\docs\\prompt.md": "7e7f0f0d887610f77576fe104e59b794e56cf230b8b2c689ab9484b0c869c45c"
+  },
+  "protected_after_sha256": {
+    "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+    "E:\\Vehicle-Agent-Security\\agent-security\\szh\\docs\\prompt.md": "7e7f0f0d887610f77576fe104e59b794e56cf230b8b2c689ab9484b0c869c45c"
+  },
+  "protected_unchanged": true
+}

@@ -1,0 +1,26 @@
+{
+  "started": "2026-10-17T11:38:29.959775+08:00",
+  "finished": "2026-10-17T11:38:30.467969+08:00",
+  "purpose": "D06-D25 review only",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/check_workspace.py",
+    "--sources"
+  ],
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "exit_code": 0,
+  "stdout": "PASS: 50 daily plan(s), 50-day manifest/index and current document links.\nPASS: 4 original DOCX, 700 A:N values, 50 source blocks, 650 summary references, 2500 Gantt formulas and 50 owner formulas.\nRead-only check; no daily completion or Excel progress is asserted.\n",
+  "stderr": "",
+  "protected_before_sha256": {
+    "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+    "E:\\Vehicle-Agent-Security\\agent-security\\szh\\docs\\prompt.md": "7e7f0f0d887610f77576fe104e59b794e56cf230b8b2c689ab9484b0c869c45c"
+  },
+  "protected_after_sha256": {
+    "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+    "E:\\Vehicle-Agent-Security\\agent-security\\szh\\docs\\prompt.md": "7e7f0f0d887610f77576fe104e59b794e56cf230b8b2c689ab9484b0c869c45c"
+  },
+  "protected_unchanged": true
+}
