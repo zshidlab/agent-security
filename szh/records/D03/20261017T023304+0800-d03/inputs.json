@@ -1,0 +1,19 @@
+{
+  "day": "D03",
+  "run_id": "20261017T023304+0800-d03",
+  "date": "2026-10-17",
+  "source_excel_row": "A_核心算法!A7:N7",
+  "source_id": "A:block-140",
+  "schema": "trace-1.0",
+  "files": {
+    "algorithm/data/轨迹示例.json": "a13be7eef3d04c129ac9a4f1a9bb0a098a356880f67b2f7be6967c0912c1fe4e",
+    "algorithm/说明/字段解释.md": "db26220bc556e34b7a2289a496e7945d3c598efc6771e266c81faf9b8abe72c0",
+    "algorithm/schemas/trace.schema.json": "4c9960b721fd71557bd9f11be5c636f28b8e805fff86124a38bb7bc0d6213f26",
+    "algorithm/tests/fixtures/trace_invalid.json": "5734e3ca69d46a0531992e9151c7af456614b5481eee16e5437e01edbdecf2e8",
+    "algorithm/tests/fixtures/trace_duplicate_ids.json": "813a4054e6aded0e6fb74a78c53ae16ce8eeccd5488e7939389c73f4c547d09d",
+    "algorithm/tests/test_d03_trace_schema.py": "1f6d4b16e7d9b1657be1982531dcb4c3909a31192c45103de67c0732d63a6abe"
+  },
+  "synthetic": true,
+  "workspace": "E:/Vehicle-Agent-Security/agent-security/szh",
+  "python": "3.12.7"
+}

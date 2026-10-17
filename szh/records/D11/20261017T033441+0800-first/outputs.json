@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:36:01.979308+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/parse_trace.py": "0e2a558bbfe65d618d1a200ce8741dfed78bd70a04192a26a17c087ef0c0beed"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

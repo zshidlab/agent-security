@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T03:46:35.150908+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/build_step_table.py": "0b0a189693beb0abca5fa9bd66a1a35243e805d43d24937063f9304a8e30cf1f",
+    "algorithm/schemas/testplan.schema.json": "40b6cce0d34782a10c63e597967545c5821d8482ec958697bf6443e9d15f89fe"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

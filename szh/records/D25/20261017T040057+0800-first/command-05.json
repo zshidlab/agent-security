@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T04:01:57.332245+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/check_workspace.py"
+  ],
+  "exit_code": 0,
+  "stdout": "PASS: 50 daily plan(s), 50-day manifest/index and current document links.\nRead-only check; no daily completion or Excel progress is asserted.\n",
+  "stderr": ""
+}

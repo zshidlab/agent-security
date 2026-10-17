@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:31:46.346534+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/reference_graphs.py"
+  ],
+  "exit_code": 0,
+  "stdout": "10 single-annotator references; effects Unknown; no external execution\n",
+  "stderr": ""
+}

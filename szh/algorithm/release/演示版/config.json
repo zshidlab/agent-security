@@ -1,0 +1,31 @@
+{
+  "schema_version": "demo-config-1.0",
+  "scope": "local_mock",
+  "budget": {
+    "limits": {
+      "generation": 6,
+      "target": 8,
+      "observation": 6,
+      "repair": 0
+    },
+    "total": 20,
+    "rounds": 4,
+    "candidates_per_step": 3,
+    "units": 100,
+    "seconds": 30
+  },
+  "cases": {
+    "normal": {
+      "target": "fixed_policy",
+      "observer": "full"
+    },
+    "refusal": {
+      "target": "refusing",
+      "observer": "full"
+    },
+    "unknown": {
+      "target": "fixed_policy",
+      "observer": "missing_after"
+    }
+  }
+}

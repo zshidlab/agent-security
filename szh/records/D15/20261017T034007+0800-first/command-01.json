@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:40:23.901583+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/evaluate_graph.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"graphs\": 10, \"rows\": 30, \"errors\": 9, \"totals\": {\"node\": {\"tp\": 34, \"fp\": 0, \"fn\": 0}, \"temporal\": {\"tp\": 35, \"fp\": 0, \"fn\": 0}, \"dependency\": {\"tp\": 0, \"fp\": 0, \"fn\": 9}}}\n",
+  "stderr": ""
+}

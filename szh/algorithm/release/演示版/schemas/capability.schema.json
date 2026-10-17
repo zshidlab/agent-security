@@ -1,0 +1,11 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "$id":"https://oapt-a.local/schema/capability-1.0.json",
+ "type":"object","required":["schema_version","agent_config_id","maintainer","changed_on","implementation","scope","tools","observation_limits"],"additionalProperties":false,
+ "properties":{
+  "schema_version":{"const":"capability-1.0"},"agent_config_id":{"type":"string","minLength":1},"maintainer":{"type":"string"},"changed_on":{"type":"string"},"implementation":{"type":"string"},"scope":{"const":"in-memory synthetic only"},"observation_limits":{"type":"array","items":{"type":"string"}},
+  "tools":{"type":"array","minItems":4,"maxItems":4,"items":{"type":"object","required":["name","parameters","resource_type","resource_parameter","effect","permissions","preconditions","observables","trust"],"additionalProperties":false,"properties":{
+   "name":{"enum":["read_notification","read_file","modify_appointment","view_result"]},"parameters":{"type":"object"},"resource_type":{"enum":["notifications","files","appointments"]},"resource_parameter":{"type":"string"},"effect":{"enum":["read_only","write_time"]},"permissions":{"type":"object","required":["mode","subjects"],"additionalProperties":false,"properties":{"mode":{"enum":["local_lookup_no_subject_check","subject_allowlist"]},"subjects":{"type":"array","items":{"type":"string"}}}},"preconditions":{"type":"array","items":{"type":"string"}},"observables":{"type":"array","items":{"type":"string"}},"trust":{"type":"string"}
+  }}}
+ }
+}

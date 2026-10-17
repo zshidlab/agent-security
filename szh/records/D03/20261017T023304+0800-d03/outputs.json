@@ -1,0 +1,16 @@
+{
+  "day": "D03",
+  "status": "implementation verified",
+  "deliverables": [
+    "algorithm/data/轨迹示例.json",
+    "algorithm/说明/字段解释.md",
+    "algorithm/schemas/trace.schema.json",
+    "algorithm/tests/fixtures/trace_invalid.json",
+    "algorithm/tests/fixtures/trace_duplicate_ids.json"
+  ],
+  "test": "3 passed",
+  "contract": "Pre: D02 fixed-reply-1.0. Goal: freeze trace-1.0 and validation fixtures. Invariant: event_id, turn_id and message_id are unique; request/result tool_call_id linkage is explicit. Observe: valid trace validates and malformed/duplicate fixtures fail with paths. Post: D04 event records use versioned axes.",
+  "evidence": [
+    "checks.md; pytest output; trace-1.0 schema and invalid/duplicate fixtures"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T04:01:13.730325+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/build_demo_release.py",
+    "--output",
+    "algorithm/release/演示版"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"release_id\": \"OAPT_A-D25-local-demo-1.0\", \"files\": 18}\n",
+  "stderr": ""
+}

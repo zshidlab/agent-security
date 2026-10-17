@@ -1,0 +1,43 @@
+{
+  "started": "2026-10-17T03:23:28.572507+08:00",
+  "day": "D06",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "schema": "daily-evidence-1.0",
+  "source_block": 176,
+  "input_hashes": {
+    "docs\\tasks\\manifest.json": "38fd7be0eeeb279ebfcd52f26fc5bc5e8ccf92cfa7f23c9f6a37fa45190ae429",
+    "docs\\tasks\\D06.md": "3d4987afecaf93206e7574df29eb5eb33e0dd51957e07f998af6563e876e33ae",
+    "algorithm\\data\\轨迹示例.json": "a13be7eef3d04c129ac9a4f1a9bb0a098a356880f67b2f7be6967c0912c1fe4e",
+    "algorithm\\说明\\字段解释.md": "db26220bc556e34b7a2289a496e7945d3c598efc6771e266c81faf9b8abe72c0",
+    "algorithm\\schemas\\trace.schema.json": "4c9960b721fd71557bd9f11be5c636f28b8e805fff86124a38bb7bc0d6213f26",
+    "algorithm\\tests\\fixtures\\trace_invalid.json": "5734e3ca69d46a0531992e9151c7af456614b5481eee16e5437e01edbdecf2e8",
+    "algorithm\\tests\\fixtures\\trace_duplicate_ids.json": "813a4054e6aded0e6fb74a78c53ae16ce8eeccd5488e7939389c73f4c547d09d",
+    "algorithm\\记录\\第1周自查.md": "51e50ccbeaca179b401655cba3537d256d2c43ee3d3e55cfeadb0d66fb78e4f4",
+    "algorithm\\run_demo.py": "68d5eb3c44e03c41d068250c131e90f2c194809aa69b53fae0b08c17d822e503"
+  },
+  "source_documents": [
+    {
+      "role": "A",
+      "path": "../../OAPT_A_工作清单与50日研究计划_2026-10-16.docx",
+      "sha256": "a9ed05d3986673c213e5d26a2a940413312248cdd35fe12f6276145edd49b278"
+    },
+    {
+      "role": "B",
+      "path": "../../OAPT_B_工作清单与50日研究计划_2026-10-16.docx",
+      "sha256": "5eb3fac3afc5442c39d4b0f7ef06937b63f27681a6338f0a55ac520e3e1ba2ce"
+    },
+    {
+      "role": "C",
+      "path": "../../OAPT_C_工作清单与50日研究计划_2026-10-16.docx",
+      "sha256": "1bce6e8bcbe84e27668291d1575a6118587049f64d84442b2a3dc07d9eda01d4"
+    },
+    {
+      "role": "unified",
+      "path": "../../OAPT_通用工具型智能体多轮安全测试_统一研究方案_TDSC.docx",
+      "sha256": "8dadf0860605d8e188c6d635999c9125880e988f6e328a32fe2b6bf3a03ae063"
+    }
+  ],
+  "authority": "User explicitly authorized D06–D25 and A O:U workbook writes",
+  "preexisting_changes": "?? \"algorithm/data/\\350\\275\\250\\350\\277\\271\\347\\244\\272\\344\\276\\213.json\"\n?? algorithm/examples/booking.json\n?? algorithm/pyproject.toml\n?? algorithm/run_demo.py\n?? algorithm/schemas/trace.schema.json\n?? algorithm/src/fixed_model.py\n?? algorithm/src/mini_executor.py\n?? algorithm/tests/fixtures/trace_duplicate_ids.json\n?? algorithm/tests/fixtures/trace_invalid.json\n?? algorithm/tests/test_d02_environment.py\n?? algorithm/tests/test_d03_trace_schema.py\n?? algorithm/tests/test_d04_mini_executor.py\n?? algorithm/tests/test_d05_week1_smoke.py\n?? \"algorithm/tests/\\345\\233\\272\\345\\256\\232\\345\\233\\236\\345\\244\\215\\346\\265\\213\\350\\257\\225.py\"\n?? \"algorithm/\\347\\216\\257\\345\\242\\203/\\344\\276\\235\\350\\265\\226.txt\"\n?? \"algorithm/\\350\\256\\260\\345\\275\\225/\\347\\254\\2541\\345\\221\\250\\350\\207\\252\\346\\237\\245.md\"\n?? \"algorithm/\\350\\257\\264\\346\\230\\216/\\345\\255\\227\\346\\256\\265\\350\\247\\243\\351\\207\\212.md\"\n?? \"algorithm/\\350\\257\\264\\346\\230\\216/\\347\\240\\224\\347\\251\\266\\344\\273\\273\\345\\212\\241.md\"\n?? records/D01/20261017T023304+0800-d01/checks.md\n?? records/D01/20261017T023304+0800-d01/commands.md\n?? records/D01/20261017T023304+0800-d01/daily-record.md\n?? records/D01/20261017T023304+0800-d01/excel-reopen.md\n?? records/D01/20261017T023304+0800-d01/handoff.md\n?? records/D01/20261017T023304+0800-d01/inputs.json\n?? records/D01/20261017T023304+0800-d01/outputs.json\n?? records/D02/20261017T023304+0800-d02/checks.md\n?? records/D02/20261017T023304+0800-d02/commands.md\n?? records/D02/20261017T023304+0800-d02/daily-record.md\n?? records/D02/20261017T023304+0800-d02/excel-reopen.md\n?? records/D02/20261017T023304+0800-d02/handoff.md\n?? records/D02/20261017T023304+0800-d02/inputs.json\n?? records/D02/20261017T023304+0800-d02/outputs.json\n?? records/D03/20261017T023304+0800-d03/checks.md\n?? records/D03/20261017T023304+0800-d03/commands.md\n?? records/D03/20261017T023304+0800-d03/daily-record.md\n?? records/D03/20261017T023304+0800-d03/excel-reopen.md\n?? records/D03/20261017T023304+0800-d03/handoff.md\n?? records/D03/20261017T023304+0800-d03/inputs.json\n?? records/D03/20261017T023304+0800-d03/outputs.json\n?? records/D04/20261017T023304+0800-d04/checks.md\n?? records/D04/20261017T023304+0800-d04/commands.md\n?? records/D04/20261017T023304+0800-d04/daily-record.md\n?? records/D04/20261017T023304+0800-d04/excel-reopen.md\n?? records/D04/20261017T023304+0800-d04/handoff.md\n?? records/D04/20261017T023304+0800-d04/inputs.json\n?? records/D04/20261017T023304+0800-d04/outputs.json\n?? records/D05/20261017T000000+0800-d05/output-valid/demo-output.json\n?? records/D05/20261017T023304+0800-d05/checks.md\n?? records/D05/20261017T023304+0800-d05/clean-copy-commands.json\n?? records/D05/20261017T023304+0800-d05/clean-copy-output.json\n?? records/D05/20261017T023304+0800-d05/commands.md\n?? records/D05/20261017T023304+0800-d05/daily-record.md\n?? records/D05/20261017T023304+0800-d05/excel-reopen.md\n?? records/D05/20261017T023304+0800-d05/handoff.md\n?? records/D05/20261017T023304+0800-d05/input-missing-field.json\n?? records/D05/20261017T023304+0800-d05/inputs.json\n?? records/D05/20261017T023304+0800-d05/invalid-run.json\n?? records/D05/20261017T023304+0800-d05/invalid.stderr.txt\n?? records/D05/20261017T023304+0800-d05/invalid.stdout.txt\n?? records/D05/20261017T023304+0800-d05/output-valid/demo-output.json\n?? records/D05/20261017T023304+0800-d05/outputs.json\n?? scripts/day_run.py\n"
+}

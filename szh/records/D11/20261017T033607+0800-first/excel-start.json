@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:36:08.676231+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 15,
+  "source_A_N": {
+    "工作日编号": 11,
+    "计划开始日期": "2026-11-02",
+    "计划结束日期": "2026-11-02",
+    "来源块": "A:block-236",
+    "原文日标题": "第3周 第11天 写按轮次整理对话的程序",
+    "任务名称/当天操作": "第3周 第11天 写按轮次整理对话的程序\n1. 逐条读取消息。\n2. 保持原始顺序和编号。\n3. 把工具调用、返回、状态修改识别成不同事件。\n4. 输出便于查看的逐轮表。",
+    "本周目标": "实现步骤抽取与证据检查",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "PROV O The PROV Ontology；JSON Schema Draft 2020 12",
+    "开始前准备": "开发轨迹。",
+    "预期结果": "同一轮的请求和返回保留两个事件编号。",
+    "当天保存": "src/parse_trace.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "20条输入不丢消息，输出可与原文逐行对应。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    80,
+    "2026-10-17",
+    "",
+    "algorithm/src/parse_trace.py",
+    "records/D11/20261017T033441+0800-first; checks.md; command-*.json",
+    "待修复null列表处理并新建run重跑；D12仅开始登记，实际实现暂停至D11修复验收。D09隔日复查未完成，B/C接口不变。"
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/parse_trace.py",
+    "records\\D11\\20261017T033607+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "d1e64cb8df9dbfc03b5f7ee7f39d55eab05d845e998e13cf3bafc94cfd14ea56",
+  "after_sha256": "a18cb056cb601f6a523306692b804b734bb53f9e649512e31869c4b394e7c407",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

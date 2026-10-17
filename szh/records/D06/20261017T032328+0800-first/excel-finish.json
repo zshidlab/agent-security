@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:26:23.023055+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 10,
+  "source_A_N": {
+    "工作日编号": 6,
+    "计划开始日期": "2026-10-26",
+    "计划结束日期": "2026-10-26",
+    "来源块": "A:block-176",
+    "原文日标题": "第2周 第6天 收集历史多轮轨迹",
+    "任务名称/当天操作": "第2周 第6天 收集历史多轮轨迹\n1. 建立来源、版本、许可、实际下载文件四列表。\n2. 先查看每个来源10条。\n3. 标记是否含多轮回复及工具结果。\n4. 继续整理至200条候选并保留排除原因。",
+    "本周目标": "收集真实轨迹并建立个人标注说明",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "STAC 论文 官方代码；AgentLAB 论文 官方代码",
+    "开始前准备": "公开论文及可下载文件。",
+    "预期结果": "200条候选中可能只有部分能建图，两个数量分开写。",
+    "当天保存": "data/历史来源清单.csv。另保存当天的实际命令和执行记录。",
+    "验收标准": "所有记录能找到原文件；没有用自编对话冒充公开轨迹。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/data/历史来源清单.csv",
+    "records\\D06\\20261017T032328+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    90,
+    "2026-10-17",
+    "",
+    "algorithm/data/历史来源清单.csv",
+    "records/D06/20261017T032328+0800-first; checks.md; command-*.json",
+    "修复计划：改用独立系统临时目录；新建重跑记录。候选174条可建图，不宣称成功。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "ea81d3f3f0989dc6099af4787ab8db4f9ee4fc9e0cd84f0c19b6229077fa68ab",
+  "after_sha256": "30d7abcf9260e60e435ca88c0245812138ef9e553a96195e85cd5cfd65297d2a",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:36:24.356273+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/parse_trace.py",
+    "--output",
+    "records/D11/20261017T033607+0800-first/parsed.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"inputs\": 20, \"messages\": 272, \"events\": 234, \"invalid_preserved\": 2}\n",
+  "stderr": ""
+}

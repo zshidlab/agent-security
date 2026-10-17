@@ -1,0 +1,3 @@
+{"fixture_id":"valid-empty","mode":"offline_fixture","raw_reply":"{\"schema_version\":\"model-proposal-1.0\",\"source_id\":\"synthetic\",\"steps\":[]}","purpose":"合法空图结构控制流；非真实模型"}
+{"fixture_id":"bad-json","mode":"offline_fixture","raw_reply":"{bad","purpose":"格式修复预算；非真实模型"}
+{"fixture_id":"hallucinated-99","mode":"offline_fixture","raw_reply":"{\"schema_version\":\"model-proposal-1.0\",\"source_id\":\"synthetic\",\"steps\":[{\"node_id\":\"n0\",\"action\":\"read\",\"object\":{},\"evidence_refs\":[\"event99\"]}]}","purpose":"不存在证据直接拒收；非真实模型"}

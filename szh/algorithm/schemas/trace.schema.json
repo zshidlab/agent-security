@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oapt-a.local/schema/trace-1.0.json",
+  "title": "OAPT_A synthetic execution trace",
+  "type": "object",
+  "required": ["schema_version", "source", "synthetic", "task_id", "turns"],
+  "properties": {
+    "schema_version": {"const": "trace-1.0"},
+    "source": {"type": "object", "required": ["source_id", "source_group"], "properties": {"source_id": {"type": "string", "minLength": 1}, "source_group": {"type": "string", "minLength": 1}}, "additionalProperties": false},
+    "synthetic": {"const": true},
+    "task_id": {"type": "string", "pattern": "^task-[A-Za-z0-9_-]+$"},
+    "turns": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/turn"}}
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "turn": {
+      "type": "object",
+      "required": ["turn_id", "messages", "events"],
+      "properties": {
+        "turn_id": {"type": "string", "pattern": "^turn-[A-Za-z0-9_-]+$"},
+        "messages": {"type": "array", "items": {"$ref": "#/$defs/message"}},
+        "events": {"type": "array", "items": {"$ref": "#/$defs/event"}}
+      },
+      "additionalProperties": false
+    },
+    "message": {
+      "type": "object",
+      "required": ["message_id", "speaker", "text", "trust", "synthetic"],
+      "properties": {
+        "message_id": {"type": "string", "pattern": "^message-[A-Za-z0-9_-]+$"},
+        "speaker": {"type": "string", "enum": ["user", "assistant", "external"]},
+        "text": {"type": "string"},
+        "trust": {"type": "string", "enum": ["user_authorized", "low_trust_external", "model_text"]},
+        "synthetic": {"const": true},
+        "missing_reason": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    },
+    "event": {
+      "type": "object",
+      "required": ["event_id", "event_type", "tool_call_id", "tool", "request", "attempt", "blocked", "effect", "violated"],
+      "properties": {
+        "event_id": {"type": "string", "pattern": "^event-[A-Za-z0-9_-]+$"},
+        "event_type": {"type": "string", "enum": ["tool_request", "tool_result", "state_diff"]},
+        "tool_call_id": {"type": "string", "pattern": "^call-[A-Za-z0-9_-]+$"},
+        "tool": {"type": "string", "minLength": 1},
+        "request": {"type": ["string", "object", "null"]},
+        "attempt": {"type": ["string", "null"], "enum": ["observed", "Unknown", null]},
+        "blocked": {"type": ["string", "null"], "enum": ["observed", "Unknown", null]},
+        "effect": {"type": ["string", "null"], "enum": ["observed", "Unknown", null]},
+        "violated": {"type": ["string", "null"], "enum": ["observed", "Unknown", null]},
+        "before": {},
+        "after": {},
+        "missing_reason": {"type": ["string", "null"]}
+      },
+      "additionalProperties": false
+    }
+  }
+}

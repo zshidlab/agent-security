@@ -1,0 +1,19 @@
+{
+  "day": "D02",
+  "run_id": "20261017T023304+0800-d02",
+  "date": "2026-10-17",
+  "source_excel_row": "A_核心算法!A6:N6",
+  "source_id": "A:block-128",
+  "schema": "fixed-reply-1.0",
+  "files": {
+    "algorithm/环境/依赖.txt": "162eef05a70a7756debcaa92e8f65f1b3de013b655c9e24bf0728263e3f70166",
+    "algorithm/tests/固定回复测试.py": "8c5e5906d06e18111fd60d773b0c9a61b0f2239c97e7a0c1af4edf670e52999f",
+    "algorithm/src/fixed_model.py": "9662efa54f2374f303d9af3b032b7360ca989ef1de1e6859728f6fa19d560226",
+    "algorithm/pyproject.toml": "cce903a91adea72cfd7bf143bc9f4c6a25f5cf772d317f8a2e983a6323ff1426",
+    "algorithm/examples/booking.json": "8d5ed059c021a1ee23bad42f251ec37f4fd2331f6ffefa75026e897d9d3faca2",
+    "algorithm/tests/test_d02_environment.py": "186fd9ae1c33b3bbcec5563b27d91d375f36561fa6bf6ac5bb5f7b2ae1fc0696"
+  },
+  "synthetic": true,
+  "workspace": "E:/Vehicle-Agent-Security/agent-security/szh",
+  "python": "3.12.7"
+}

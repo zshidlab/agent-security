@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oapt-a-local-executor"
+version = "0.1.0"
+description = "无害合成输入上的 OAPT_A 最小执行器"
+requires-python = ">=3.10"
+dependencies = ["jsonschema>=4.0", "pytest>=7.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+addopts = "-p no:cacheprovider"

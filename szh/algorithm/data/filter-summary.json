@@ -1,0 +1,15 @@
+{
+  "schema_version": "source-filter-1.0",
+  "input": 200,
+  "kept": 171,
+  "excluded": 29,
+  "reasons": {
+    "single_turn": 3,
+    "missing_reply": 1,
+    "duplicate_raw_content": 22,
+    "missing_tool_return": 3
+  },
+  "group_count": 36,
+  "group_rule": "same suite/user_task across injections/models; also union identical raw hashes",
+  "count_conserved": true
+}

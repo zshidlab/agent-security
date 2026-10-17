@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-17T04:00:23.627012+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "algorithm/tests/test_d25_demo_release.py",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "...                                                                      [100%]\n============================== warnings summary ===============================\ntests/test_d25_demo_release.py::test_three_cases_run_independently_with_only_frozen_package\n  D:\\anaconda\\Lib\\site-packages\\_pytest\\threadexception.py:73: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-5 (_readerthread)\n  \n  Traceback (most recent call last):\n    File \"D:\\anaconda\\Lib\\threading.py\", line 1075, in _bootstrap_inner\n      self.run()\n    File \"D:\\anaconda\\Lib\\threading.py\", line 1012, in run\n      self._target(*self._args, **self._kwargs)\n    File \"D:\\anaconda\\Lib\\subprocess.py\", line 1599, in _readerthread\n      buffer.append(fh.read())\n                    ^^^^^^^^^\n    File \"<frozen codecs>\", line 322, in decode\n  UnicodeDecodeError: 'utf-8' codec can't decode byte 0xb9 in position 92: invalid start byte\n  \n    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))\n\n-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html\n3 passed, 1 warning in 1.19s\n",
+  "stderr": ""
+}

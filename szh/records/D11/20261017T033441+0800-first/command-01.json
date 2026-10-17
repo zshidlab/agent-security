@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:35:31.304508+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/parse_trace.py",
+    "--output",
+    "records/D11/20261017T033441+0800-first/parsed.jsonl"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\parse_trace.py\", line 70, in <module>\n    rows=parse_development();a.output.write_text(''.join(json.dumps(r,ensure_ascii=False)+'\\n' for r in rows),encoding='utf8')\n         ^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\parse_trace.py\", line 66, in parse_development\n    return [parse(json.loads((ROOT/r['local_file']).read_text(encoding='utf8')),r['source_id'],source_group_id=r['source_group_id']) for r in load_development()]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\parse_trace.py\", line 28, in parse\n    for j,call in enumerate(m.get('tool_calls',[])):\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not iterable\n"
+}

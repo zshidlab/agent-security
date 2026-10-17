@@ -1,0 +1,14 @@
+{
+  "day": "D01",
+  "run_id": "20261017T023304+0800-d01",
+  "date": "2026-10-17",
+  "source_excel_row": "A_核心算法!A5:N5",
+  "source_id": "A:block-116",
+  "schema": "research-task-1.0",
+  "files": {
+    "algorithm/说明/研究任务.md": "7baf9e2f148fc692c1b45dfe0878556f048712bbba1dc24bd7c58b32686b612c"
+  },
+  "synthetic": true,
+  "workspace": "E:/Vehicle-Agent-Security/agent-security/szh",
+  "python": "3.12.7"
+}

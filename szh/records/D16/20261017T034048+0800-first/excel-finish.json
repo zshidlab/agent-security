@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:41:37.606415+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 20,
+  "source_A_N": {
+    "工作日编号": 16,
+    "计划开始日期": "2026-11-09",
+    "计划结束日期": "2026-11-09",
+    "来源块": "A:block-296",
+    "原文日标题": "第4周 第16天 写目标场景能力说明",
+    "任务名称/当天操作": "第4周 第16天 写目标场景能力说明\n1. 为每个函数写输入参数及实际效果。\n2. 写哪些用户允许读写哪些资源。\n3. 写哪些事件能被外部看到。\n4. 把描述保存为一份能力文件。",
+    "本周目标": "实现目标匹配与三种完成判断",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "AgentDojo 论文 官方代码",
+    "开始前准备": "自己的微型执行器。",
+    "预期结果": "有查看预约函数，不代表有取消预约函数。",
+    "当天保存": "data/目标能力.json。另保存当天的实际命令和执行记录。",
+    "验收标准": "能力文件与实际四个函数一致，不填不存在的工具。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/data/目标能力.json; algorithm/schemas/capability.schema.json",
+    "records\\D16\\20261017T034048+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-17",
+    "algorithm/data/目标能力.json; algorithm/schemas/capability.schema.json",
+    "records/D16/20261017T034048+0800-first; checks.md; command-*.json",
+    "D04读取函数无主体鉴权，确认顺序未实现，时间仅非空字符串，均如实声明；仅合成本地状态。D09/D13条件仍待完成。B/C接口不变。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "c0ca787a2d8575386f6a40fa26edf9663c433a92c30fa81d01dcdc8995ff433a",
+  "after_sha256": "858382392ef9df9467d4ddd8c54f74f12bbcbf67e0d3a8c7d1183af318c24a85",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

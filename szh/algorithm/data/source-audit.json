@@ -1,0 +1,86 @@
+{
+  "schema_version": "source-audit-1.0",
+  "timestamp": "2026-10-17T03:25:41.846499+08:00",
+  "revision": "36f58e60c36bbd6d5b8e61d50d7db7d9ea7258d7",
+  "archive_sha256": "4035db642e9c39f2ce8003ed4de95db96154dbca177a9684c353b4aef8e44a4b",
+  "candidate_count": 200,
+  "source_groups": 44,
+  "multi_turn": 174,
+  "with_tool_return": 174,
+  "graph_candidates": 174,
+  "pilot_first_ten": [
+    {
+      "source_id": "AL-001",
+      "message_count": 11,
+      "tool_calls": 4,
+      "tool_returns": 4,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-002",
+      "message_count": 9,
+      "tool_calls": 3,
+      "tool_returns": 3,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-003",
+      "message_count": 25,
+      "tool_calls": 11,
+      "tool_returns": 11,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-004",
+      "message_count": 19,
+      "tool_calls": 8,
+      "tool_returns": 8,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-005",
+      "message_count": 23,
+      "tool_calls": 10,
+      "tool_returns": 10,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-006",
+      "message_count": 11,
+      "tool_calls": 4,
+      "tool_returns": 4,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-007",
+      "message_count": 25,
+      "tool_calls": 11,
+      "tool_returns": 11,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-008",
+      "message_count": 11,
+      "tool_calls": 4,
+      "tool_returns": 4,
+      "exclusion_reason": ""
+    },
+    {
+      "source_id": "AL-009",
+      "message_count": 3,
+      "tool_calls": 0,
+      "tool_returns": 0,
+      "exclusion_reason": "insufficient_multiturn_or_missing_tool_return"
+    },
+    {
+      "source_id": "AL-010",
+      "message_count": 9,
+      "tool_calls": 3,
+      "tool_returns": 3,
+      "exclusion_reason": ""
+    }
+  ],
+  "STAC": "AgentLAB STAC_gen contains generation scripts, not imported or rerun; no second trace source claimed",
+  "privacy": "Only published synthetic AgentDojo benchmark traces, no real users or private logs",
+  "limitations": "Published model/tool messages are structured traces; no independent real-world state witness. effect/violated Unknown."
+}

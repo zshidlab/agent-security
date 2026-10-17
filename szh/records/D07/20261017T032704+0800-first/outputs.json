@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:27:43.163498+08:00",
+  "deliverables_sha256": {
+    "algorithm/data/筛选结果.csv": "baea1405303c74f729154d73e04da40c2cdc9a4804c05a47fb25e70ba5802d03"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:27:43.164503+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "--",
+    "."
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ""
+}

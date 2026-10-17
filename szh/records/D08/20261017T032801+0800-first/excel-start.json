@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:28:02.583418+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 12,
+  "source_A_N": {
+    "工作日编号": 8,
+    "计划开始日期": "2026-10-28",
+    "计划结束日期": "2026-10-28",
+    "来源块": "A:block-200",
+    "原文日标题": "第2周 第8天 自己先画十条示范步骤图",
+    "任务名称/当天操作": "第2周 第8天 自己先画十条示范步骤图\n1. 逐轮写这一轮发生了什么。\n2. 只在目标或工具效果改变时另起一步。\n3. 把每一步对应原消息编号。\n4. 分别画先后关系和有证据的依赖关系。",
+    "本周目标": "收集真实轨迹并建立个人标注说明",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "Automated Generation and Analysis of Attack Graphs；PROV O The PROV Ontology",
+    "开始前准备": "10条保留轨迹。",
+    "预期结果": "先读文件再发消息只有先后关系，未必证明依赖。",
+    "当天保存": "data/人工示范图.jsonl。另保存当天的实际命令和执行记录。",
+    "验收标准": "图上每一步能回查原文，没有证据的关系写尚不能确定。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "未开始",
+    0,
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/data/人工示范图.jsonl",
+    "records\\D08\\20261017T032801+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "d7b45291ec04f891a49f7554d7f0d302663e1cb9c784a9235fa58b0f04370dc2",
+  "after_sha256": "18222f29e3662fb260c9d6efb6dd473d90816a568ee27195bbf6af271e6ec23f",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

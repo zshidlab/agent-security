@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:54:12.475641+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/retry_policy.py": "d0594b6e907567fe1f3596ba194580eda5f68dbe2ee58ce24b8f7870f5edc006"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

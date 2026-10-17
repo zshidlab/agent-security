@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T04:03:20.272073+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/audit_d06_d25.py",
+    "--output",
+    "records/D25/20261017T040057+0800-first/session-audit.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"completed\": 18, \"partial\": [\"D09\", \"D13\"], \"git_review\": {\"status_entries\": 751, \"ignored_entries\": [], \"deliverable_files_probed\": 46, \"all_deliverables_not_ignored\": true, \"diff_check\": \"passed\", \"szh_gitignore_added\": false, \"classification\": \"Code, schemas, research data, documents and reproducible evidence retained; temporary environments/caches outside workspace.\"}}\n",
+  "stderr": ""
+}

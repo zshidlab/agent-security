@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-17T03:35:34.609740+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "algorithm/tests/test_d11_parse_trace.py",
+    "-q"
+  ],
+  "exit_code": 1,
+  "stdout": "F..                                                                      [100%]\n================================== FAILURES ===================================\n_________________ test_twenty_roundtrip_and_unique_event_ids __________________\n\n    def test_twenty_roundtrip_and_unique_event_ids():\n>       rs=parse_development();assert len(rs)==20\n\nalgorithm\\tests\\test_d11_parse_trace.py:15: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nalgorithm\\src\\parse_trace.py:66: in parse_development\n    return [parse(json.loads((ROOT/r['local_file']).read_text(encoding='utf8')),r['source_id'],source_group_id=r['source_group_id']) for r in load_development()]\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nmessages = [{'content': [{'content': \"You are an AI language model who assists the user by using the given tools. \\\\\\nThe user's ...unction': 'get_rating_reviews_for_hotels', 'id': 'call_CZ2jyWlwbQU23W80X49FACs4', 'placeholder_args': None}, ...}, ...]\nsource_id = 'AL-018', task_id = 'AL-018'\nsource_group_id = 'agentdojo:travel:user_task_0'\n\n    def parse(messages, source_id, task_id=None, source_group_id='Unknown'):\n        if not isinstance(messages,list): raise ValueError('messages must be a list')\n        task_id=task_id or source_id\n        result={'schema_version':'normalized-trace-1.0','source_id':source_id,'source_group_id':source_group_id,\n                'task_id':task_id,'messages':[],'events':[],'issues':[],'status':'Valid'}\n        original_ids=[m.get('message_id') for m in messages if m.get('message_id') is not None]\n        if len(set(original_ids))!=len(original_ids): result['issues'].append('duplicate_message_id')\n        for i,m in enumerate(messages):\n            mid=f'{source_id}:m{i:04}'\n            result['messages'].append({'message_id':mid,'original_id':m.get('message_id'),'original_index':i,'raw':copy.deepcopy(m)})\n            if m.get('task_id',task_id)!=task_id: result['issues'].append(f'cross_task_message:{mid}')\n            def emit(kind,call,extra=None):\n                e={'event_id':f'{mid}:e{len([e for e in result[\"events\"] if e[\"message_id\"]==mid]):02}',\n                   'message_id':mid,'message_index':i,'task_id':m.get('task_id',task_id),'kind':kind,\n                   'original_call_id':call.get('id'), 'tool':call.get('function'),'args':copy.deepcopy(call.get('args')),\n                   'call_key':None,'missing_reason':None,'source_id':source_id}\n                e.update(extra or {});result['events'].append(e)\n>           for j,call in enumerate(m.get('tool_calls',[])):\nE           TypeError: 'NoneType' object is not iterable\n\nalgorithm\\src\\parse_trace.py:28: TypeError\n=========================== short test summary info ===========================\nFAILED algorithm\\tests\\test_d11_parse_trace.py::test_twenty_roundtrip_and_unique_event_ids\n1 failed, 2 passed in 0.10s\n",
+  "stderr": ""
+}

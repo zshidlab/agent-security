@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-17T03:25:58.786235+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "algorithm/tests/test_d06_source_inventory.py",
+    "-q"
+  ],
+  "exit_code": 1,
+  "stdout": "..E                                                                      [100%]\n=================================== ERRORS ====================================\n_______ ERROR at setup of test_tampered_and_unlicensed_sources_rejected _______\n\nself = WindowsPath('C:/Users/15790/AppData/Local/Temp/pytest-of-15790')\n\n    def iterdir(self):\n        \"\"\"Yield path objects of the directory contents.\n    \n        The children are yielded in arbitrary order, and the\n        special entries '.' and '..' are not included.\n        \"\"\"\n>       for name in os.listdir(self):\nE       PermissionError: [WinError 5] 拒绝访问。: 'C:\\\\Users\\\\15790\\\\AppData\\\\Local\\\\Temp\\\\pytest-of-15790'\n\nD:\\anaconda\\Lib\\pathlib.py:1056: PermissionError\n=========================== short test summary info ===========================\nERROR algorithm\\tests\\test_d06_source_inventory.py::test_tampered_and_unlicensed_sources_rejected\n2 passed, 1 error in 1.70s\n",
+  "stderr": ""
+}

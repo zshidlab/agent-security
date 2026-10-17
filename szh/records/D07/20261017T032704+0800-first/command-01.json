@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:27:40.917691+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/source_filter.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"schema_version\": \"source-filter-1.0\", \"input\": 200, \"kept\": 171, \"excluded\": 29, \"reasons\": {\"single_turn\": 3, \"missing_reply\": 1, \"duplicate_raw_content\": 22, \"missing_tool_return\": 3}, \"group_count\": 36, \"group_rule\": \"same suite/user_task across injections/models; also union identical raw hashes\", \"count_conserved\": true}\n",
+  "stderr": ""
+}

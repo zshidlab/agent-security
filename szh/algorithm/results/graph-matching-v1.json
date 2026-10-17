@@ -1,0 +1,16 @@
+{
+  "schema_version": "graph-matching-1.0",
+  "node_key": [
+    "source_id",
+    "original_request_index",
+    "call_index",
+    "tool",
+    "canonical_args"
+  ],
+  "relations": "directed endpoint node keys and exact edge kind; temporal and dependency separate",
+  "precision": "TP/(TP+FP)",
+  "recall": "TP/(TP+FN)",
+  "F1": "2TP/(2TP+FP+FN)",
+  "zero_denominator": "null/undefined, including empty graphs; retain all counts",
+  "scope": "rule vs ten single-annotator development references; D09 reannotation pending; no heldout/model quality claim"
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:39:33.263840+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 18,
+  "source_A_N": {
+    "工作日编号": 14,
+    "计划开始日期": "2026-11-05",
+    "计划结束日期": "2026-11-05",
+    "来源块": "A:block-272",
+    "原文日标题": "第3周 第14天 检查图是否存在明显错误",
+    "任务名称/当天操作": "第3周 第14天 检查图是否存在明显错误\n1. 检查节点编号唯一。\n2. 检查证据确实存在。\n3. 检查依赖前提能在上游找到。\n4. 让缺证据的关系回到候选状态而非自动确认。",
+    "本周目标": "实现步骤抽取与证据检查",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "Automated Generation and Analysis of Attack Graphs",
+    "开始前准备": "规则图和模型图。",
+    "预期结果": "一条依赖边找不到支持事件，会输出缺失证据错误。",
+    "当天保存": "src/check_graph.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "故意构造的空证据、重复节点、错误方向三例均被发现。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/check_graph.py",
+    "records\\D14\\20261017T033837+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-17",
+    "algorithm/src/check_graph.py",
+    "records/D14/20261017T033837+0800-first; checks.md; command-*.json",
+    "D13真实模型未调用，模型回复图仅fixture；D14检查器本地行为已独立验收，不代表抽取质量；D09复查待完成。B/C接口不变。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "6ee7f8e2d2ffb890c581192d142edc53543cdde9867e2b67ada066637eb4e9eb",
+  "after_sha256": "26e9c0a326f59730963e1a0ccad4e7ef6591ff5e4045792dda9cbaa38d0fc7a8",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

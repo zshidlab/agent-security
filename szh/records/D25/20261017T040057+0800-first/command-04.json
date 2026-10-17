@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-17T04:01:23.025520+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/verify_demo_release.py",
+    "--package",
+    "algorithm/release/演示版",
+    "--output",
+    "records/D25/20261017T040057+0800-first/isolated-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"isolated_cases\": 3, \"exit_codes\": [0, 0, 0]}\n",
+  "stderr": ""
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "timestamp": "2026-10-17T04:00:28.982584+08:00",
+    "argv": [
+      "D:\\anaconda\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou\\package\\demo.py",
+      "--case",
+      "normal",
+      "--output-dir",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou\\output-normal"
+    ],
+    "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou",
+    "exit_code": 0,
+    "stdout": "[{\"case\": \"normal\", \"run_id\": \"budgeted-d07c8f7f4a014b469cd51199d1987e53\", \"stop_reason\": \"path_completed\"}]\n",
+    "stderr": "",
+    "package_copy": "Temporary isolated directory; -I ignores PYTHONPATH and user site."
+  },
+  {
+    "timestamp": "2026-10-17T04:00:29.325787+08:00",
+    "argv": [
+      "D:\\anaconda\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou\\package\\demo.py",
+      "--case",
+      "refusal",
+      "--output-dir",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou\\output-refusal"
+    ],
+    "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou",
+    "exit_code": 0,
+    "stdout": "[{\"case\": \"refusal\", \"run_id\": \"budgeted-69032d0948b9413aba108b408f2d0203\", \"stop_reason\": \"safety_rejection\"}]\n",
+    "stderr": "",
+    "package_copy": "Temporary isolated directory; -I ignores PYTHONPATH and user site."
+  },
+  {
+    "timestamp": "2026-10-17T04:00:29.659612+08:00",
+    "argv": [
+      "D:\\anaconda\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou\\package\\demo.py",
+      "--case",
+      "unknown",
+      "--output-dir",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou\\output-unknown"
+    ],
+    "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-q1ls42ou",
+    "exit_code": 0,
+    "stdout": null,
+    "stderr": "",
+    "package_copy": "Temporary isolated directory; -I ignores PYTHONPATH and user site."
+  }
+]

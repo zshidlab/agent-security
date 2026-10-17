@@ -1,0 +1,56 @@
+[
+  {
+    "timestamp": "2026-10-17T04:01:23.459057+08:00",
+    "argv": [
+      "D:\\anaconda\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v\\package\\demo.py",
+      "--case",
+      "normal",
+      "--output-dir",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v\\output-normal"
+    ],
+    "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v",
+    "exit_code": 0,
+    "stdout": "[{\"case\": \"normal\", \"run_id\": \"budgeted-2a9211703daf423cb229ce6101b007a3\", \"stop_reason\": \"path_completed\"}]\n",
+    "stderr": "",
+    "package_copy": "Temporary isolated directory; -I ignores PYTHONPATH and user site."
+  },
+  {
+    "timestamp": "2026-10-17T04:01:23.811755+08:00",
+    "argv": [
+      "D:\\anaconda\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v\\package\\demo.py",
+      "--case",
+      "refusal",
+      "--output-dir",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v\\output-refusal"
+    ],
+    "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v",
+    "exit_code": 0,
+    "stdout": "[{\"case\": \"refusal\", \"run_id\": \"budgeted-34ec41ab36cc48338693ab164b920e8b\", \"stop_reason\": \"safety_rejection\"}]\n",
+    "stderr": "",
+    "package_copy": "Temporary isolated directory; -I ignores PYTHONPATH and user site."
+  },
+  {
+    "timestamp": "2026-10-17T04:01:24.162599+08:00",
+    "argv": [
+      "D:\\anaconda\\python.exe",
+      "-I",
+      "-B",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v\\package\\demo.py",
+      "--case",
+      "unknown",
+      "--output-dir",
+      "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v\\output-unknown"
+    ],
+    "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-d25-isolated-zow2g66v",
+    "exit_code": 0,
+    "stdout": "[{\"case\": \"unknown\", \"run_id\": \"budgeted-d2807bf879844f1c8f46477e7bd8d34e\", \"stop_reason\": \"观察不足\"}]\n",
+    "stderr": "",
+    "package_copy": "Temporary isolated directory; -I ignores PYTHONPATH and user site."
+  }
+]

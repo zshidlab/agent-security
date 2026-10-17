@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:26:50.541444+08:00",
+  "deliverables_sha256": {
+    "algorithm/data/历史来源清单.csv": "427ab5e61aa28dce7946d19d780ffb4e4cfac301e11b7e73938b75c97efed849"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

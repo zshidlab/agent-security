@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:34:37.104817+08:00",
+  "deliverables_sha256": {
+    "algorithm/data/开发集.jsonl": "ec8d645f90db059bfa4c04e0808413c884bf3bfeb5c73c4ce4b943c1eb9eb818",
+    "algorithm/data/留出集.jsonl": "62e9fd843af81619ef98d6f02ea01013d65cb0ebe51b8b3e4997b33a415c752b",
+    "algorithm/data/split-manifest.json": "3b57f8d0c9470c40bb28fc19dccdd798540f6fc8077039922ca44d5e0494a7ff"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

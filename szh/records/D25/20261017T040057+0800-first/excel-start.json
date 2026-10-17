@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T04:00:58.172262+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 29,
+  "source_A_N": {
+    "工作日编号": 25,
+    "计划开始日期": "2026-11-20",
+    "计划结束日期": "2026-11-20",
+    "来源块": "A:block-404",
+    "原文日标题": "第5周 第25天 冻结第一个可演示版本",
+    "任务名称/当天操作": "第5周 第25天 冻结第一个可演示版本\n1. 选一条正常、一条拒绝、一条信息不足的例子。\n2. 从头重置运行。\n3. 生成可阅读的逐步报告。\n4. 保存当前代码和配置版本。",
+    "本周目标": "完成逐步生成 重试与预算控制",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "JSON Schema Draft 2020 12",
+    "开始前准备": "整条本地链路。",
+    "预期结果": "同一报告能看到为什么继续或为什么停止。",
+    "当天保存": "release/演示版/。另保存当天的实际命令和执行记录。",
+    "验收标准": "三个例子均能独立运行，模拟结果不写成真实攻击成功率。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    90,
+    "2026-10-17",
+    "",
+    "algorithm/release/演示版/",
+    "records/D25/20261017T040001+0800-first; checks.md; command-*.json",
+    "关联首失败20261017T035735+0800-first，当前冻结包亦保留；修复显式UTF-8输出后新run。D09/D13缺口持续；无B/C接口变化。"
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/release/演示版/",
+    "records\\D25\\20261017T040057+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "864e9b06c3f30a7f549d4aa348bf9794c38234574bcbf37c821e54965aba1f1e",
+  "after_sha256": "98d71c6750843a311bf81bdbb672df24d5db6f6015c159a450c3054f2436ee36",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

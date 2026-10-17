@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:46:12.991904+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 22,
+  "source_A_N": {
+    "工作日编号": 18,
+    "计划开始日期": "2026-11-11",
+    "计划结束日期": "2026-11-11",
+    "来源块": "A:block-320",
+    "原文日标题": "第4周 第18天 把步骤图转换成可执行步骤表",
+    "任务名称/当天操作": "第4周 第18天 把步骤图转换成可执行步骤表\n1. 每步写开始前必须满足什么。\n2. 写完成后必须看到什么。\n3. 写成功后去哪个步骤。\n4. 加上等待时间、重试次数和停止条件。",
+    "本周目标": "实现目标匹配与三种完成判断",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "Runtime Verification for LTL and TLTL；JSON Schema Draft 2020 12",
+    "开始前准备": "一条合格匹配路径。",
+    "预期结果": "修改预约步骤必须看到对应预约时间变化。",
+    "当天保存": "src/build_step_table.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "有完成证据的路径可编译；没有观察办法的步骤明确标不能自动确认。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    70,
+    "2026-10-17",
+    "",
+    "algorithm/src/build_step_table.py; algorithm/schemas/testplan.schema.json",
+    "records/D18/20261017T034439+0800-first; checks.md; command-*.json",
+    "未满足验收；D09/D13缺口持续；无B/C接口变化。"
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/build_step_table.py; algorithm/schemas/testplan.schema.json",
+    "records\\D18\\20261017T034611+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "d1b295f5e77687c5ef2c630fa92d537d1be8ba4637705a248dd39335a1fdedb3",
+  "after_sha256": "ca9126a41eb3784ce0eb95eadcf4a672b6ee52b5b80f81e3a491e7e11e62ff97",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

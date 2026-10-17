@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:42:30.686053+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/match_target.py",
+    "--output",
+    "records/D17/20261017T034215+0800-first/matches.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"compatible\": 1, \"rejected\": 4}\n",
+  "stderr": ""
+}

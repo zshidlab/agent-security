@@ -1,0 +1,15 @@
+{
+  "day": "D04",
+  "run_id": "20261017T023304+0800-d04",
+  "date": "2026-10-17",
+  "source_excel_row": "A_核心算法!A8:N8",
+  "source_id": "A:block-152",
+  "schema": "executor-events-1.0",
+  "files": {
+    "algorithm/src/mini_executor.py": "a49477847b6451b2ffb89a275cc8abde80c29c1ba72201448dd6a52e59dc135a",
+    "algorithm/tests/test_d04_mini_executor.py": "8fc0ef99acd58f30a8d6e40932684a4f78d841fd4647e66c61225d8873cd1d1d"
+  },
+  "synthetic": true,
+  "workspace": "E:/Vehicle-Agent-Security/agent-security/szh",
+  "python": "3.12.7"
+}

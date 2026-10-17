@@ -1,0 +1,167 @@
+{
+  "schema_version": "daily-closure-audit-1.0",
+  "timestamp": "2026-10-17T04:03:21.285818+08:00",
+  "authority": "Snapshot of formal Excel and saved daily evidence; not a separate progress authority",
+  "days": [
+    {
+      "day": "D06",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D06/20261017T032626+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D07",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D07/20261017T032704+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D08",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D08/20261017T032801+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D09",
+      "formal_status": "阻塞",
+      "formal_percent": 75,
+      "record": "records/D09/20261017T033233+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D10",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D10/20261017T033303+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D11",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D11/20261017T033607+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D12",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D12/20261017T033545+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D13",
+      "formal_status": "阻塞",
+      "formal_percent": 75,
+      "record": "records/D13/20261017T033733+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D14",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D14/20261017T033837+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D15",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D15/20261017T034007+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D16",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D16/20261017T034048+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D17",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D17/20261017T034215+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D18",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D18/20261017T034611+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D19",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D19/20261017T034724+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D20",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D20/20261017T034843+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D21",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D21/20261017T034955+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D22",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D22/20261017T035147+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D23",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D23/20261017T035342+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D24",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D24/20261017T035657+0800-first",
+      "reopened_values_match": true
+    },
+    {
+      "day": "D25",
+      "formal_status": "已完成",
+      "formal_percent": 100,
+      "record": "records/D25/20261017T040057+0800-first",
+      "reopened_values_match": true
+    }
+  ],
+  "completed": 18,
+  "partial": [
+    "D09",
+    "D13"
+  ],
+  "source_and_formula_checks": "4 DOCX, 700 source values, 650 overview references, 2500 Gantt formulas",
+  "git_review": {
+    "status_entries": 751,
+    "ignored_entries": [],
+    "deliverable_files_probed": 46,
+    "all_deliverables_not_ignored": true,
+    "diff_check": "passed",
+    "szh_gitignore_added": false,
+    "classification": "Code, schemas, research data, documents and reproducible evidence retained; temporary environments/caches outside workspace."
+  },
+  "stop_boundary": "D25; D26 not started",
+  "remaining_conditions": [
+    "D09 requires real >=24h reannotation and differences",
+    "D13 requires authorized compatible real model extraction of 20 inputs; fixture calls do not qualify"
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:47:49.356812+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "--",
+    "."
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "warning: in the working copy of 'szh/docs/tasks/D10.md', LF will be replaced by CRLF the next time Git touches it\n"
+}

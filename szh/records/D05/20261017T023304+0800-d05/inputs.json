@@ -1,0 +1,16 @@
+{
+  "day": "D05",
+  "run_id": "20261017T023304+0800-d05",
+  "date": "2026-10-17",
+  "source_excel_row": "A_核心算法!A9:N9",
+  "source_id": "A:block-164",
+  "schema": "demo-1.0",
+  "files": {
+    "algorithm/记录/第1周自查.md": "51e50ccbeaca179b401655cba3537d256d2c43ee3d3e55cfeadb0d66fb78e4f4",
+    "algorithm/run_demo.py": "68d5eb3c44e03c41d068250c131e90f2c194809aa69b53fae0b08c17d822e503",
+    "algorithm/tests/test_d05_week1_smoke.py": "e0eeda8f97f8e5281ac90285fd162dab8067aa32730f859482715e5543e0e22a"
+  },
+  "synthetic": true,
+  "workspace": "E:/Vehicle-Agent-Security/agent-security/szh",
+  "python": "3.12.7"
+}

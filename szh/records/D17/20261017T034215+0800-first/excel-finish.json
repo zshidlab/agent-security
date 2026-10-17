@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:42:42.571250+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 21,
+  "source_A_N": {
+    "工作日编号": 17,
+    "计划开始日期": "2026-11-10",
+    "计划结束日期": "2026-11-10",
+    "来源块": "A:block-308",
+    "原文日标题": "第4周 第17天 实现先筛选再排序的匹配",
+    "任务名称/当天操作": "第4周 第17天 实现先筛选再排序的匹配\n1. 先剔除目标没有的工具。\n2. 再检查资源和用户权限含义。\n3. 只对剩余候选按动作相似程度排序。\n4. 为每次不匹配保存具体原因。",
+    "本周目标": "实现目标匹配与三种完成判断",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "Automated Generation and Analysis of Attack Graphs",
+    "开始前准备": "图和目标能力文件。",
+    "预期结果": "需要发邮件的路径无法匹配只支持查看预约的目标。",
+    "当天保存": "src/match_target.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "兼容例通过，工具不存在和权限不同例拒绝。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/match_target.py",
+    "records\\D17\\20261017T034215+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-17",
+    "algorithm/src/match_target.py",
+    "records/D17/20261017T034215+0800-first; checks.md; command-*.json",
+    "硬约束匹配已独立本地验证；相似度仅简单词项代理，无质量结论；D09/D13待完成，不修改B/C接口。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "2735e587c6046c1dad2a31c6dc300aae5e15370eb9b9349137bf5b4f74ddc1de",
+  "after_sha256": "fd8afbd5ea4857b79935da5f9bbd77f9ac1ea52d9862e4f5927272752c767fb1",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

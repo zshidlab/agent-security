@@ -1,0 +1,16 @@
+{
+  "day": "D02",
+  "status": "implementation verified",
+  "deliverables": [
+    "algorithm/环境/依赖.txt",
+    "algorithm/tests/固定回复测试.py",
+    "algorithm/src/fixed_model.py",
+    "algorithm/pyproject.toml",
+    "algorithm/examples/booking.json"
+  ],
+  "test": "4 passed",
+  "contract": "Pre: D01 scope. Goal: provide deterministic credential-free reply model and importable environment. Invariant: synthetic=true is required; no credentials or external calls. Observe: valid request returns fixed reply; missing/non-synthetic requests are rejected. Post: D03 consumes fixed-reply-1.0.",
+  "evidence": [
+    "checks.md; pytest output; fixed_model.py and environment files"
+  ]
+}

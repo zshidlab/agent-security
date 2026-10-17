@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:54:05.797487+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/retry_policy.py",
+    "--output",
+    "records/D23/20261017T035342+0800-first/retry-runs.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"sequences\": 3, \"stop_reasons\": [\"safety_rejection\", \"观察不足\", \"candidate_limit\"], \"generation_calls\": [1, 1, 3]}\n",
+  "stderr": ""
+}

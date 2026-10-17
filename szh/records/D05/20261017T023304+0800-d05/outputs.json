@@ -1,0 +1,23 @@
+{
+  "day": "D05",
+  "status": "implementation and portable smoke verified",
+  "deliverables": [
+    "algorithm/记录/第1周自查.md",
+    "algorithm/run_demo.py"
+  ],
+  "test": "2 passed; portable clean-copy valid run exit 0 with 13 events; missing-field run exit 2.",
+  "contract": "Pre: D01-D04 deliverables. Goal: run portable booking smoke. Invariant: missing fields stop before tool calls and no output file is produced; reset restores initial time. Observe: request/execution/observation/reset events and explicit error path. Post: D06 can use demo-1.0 evidence.",
+  "evidence": [
+    "checks.md; clean-copy-commands.json; clean-copy-output.json; invalid-run.json"
+  ],
+  "normal_exit_code": 0,
+  "invalid_exit_code": 2,
+  "event_types": [
+    "request",
+    "execution",
+    "observation",
+    "reset"
+  ],
+  "invalid_error": "missing task fields at $: notification_id, file_id, appointment_id, requested_time, subject",
+  "invalid_input": "records/D05/20261017T023304+0800-d05/input-missing-field.json"
+}

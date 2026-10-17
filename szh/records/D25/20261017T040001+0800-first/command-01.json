@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T04:00:17.380527+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-c",
+    "from pathlib import Path; import shutil; r=Path.cwd().resolve(); s=(r/'algorithm/release/演示版').resolve(); d=(r/'records/D25/20261017T035735+0800-first/failed-release').resolve(); assert s.is_relative_to(r) and d.is_relative_to(r) and s.is_dir() and not d.exists(); shutil.move(str(s),str(d)); print('Failed package preserved at',d.relative_to(r))"
+  ],
+  "exit_code": 0,
+  "stdout": "Failed package preserved at records\\D25\\20261017T035735+0800-first\\failed-release\n",
+  "stderr": ""
+}

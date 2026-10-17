@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T04:02:04.211146+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/check_workspace.py",
+    "--sources"
+  ],
+  "exit_code": 0,
+  "stdout": "PASS: 50 daily plan(s), 50-day manifest/index and current document links.\nPASS: 4 original DOCX, 700 A:N values, 50 source blocks, 650 summary references, 2500 Gantt formulas and 50 owner formulas.\nRead-only check; no daily completion or Excel progress is asserted.\n",
+  "stderr": ""
+}

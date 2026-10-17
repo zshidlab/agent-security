@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:42:41.423757+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/match_target.py": "e78c7f93386d25b2d1236095e51093dc06e274ef03a9562f5b052c4a318d3597"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

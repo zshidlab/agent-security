@@ -1,0 +1,7 @@
+{
+  "schema_version": "trace-1.0",
+  "source": {"source_id": "source-invalid", "source_group": "synthetic_fixture"},
+  "synthetic": true,
+  "task_id": "task-invalid",
+  "turns": [{"turn_id": "turn-001", "messages": [{"message_id": "message-001", "speaker": "external", "text": "已修改"}], "events": []}]
+}

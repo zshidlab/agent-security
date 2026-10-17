@@ -1,0 +1,12 @@
+{
+  "day": "D01",
+  "status": "document and scope verified",
+  "deliverables": [
+    "algorithm/说明/研究任务.md"
+  ],
+  "test": "Document review completed; no code behavior test required.",
+  "contract": "Pre: D01 source fields and dependency-free workspace available. Goal: freeze A scope and contracts. Invariant: source DOCX/XLSX facts remain unchanged. Observe: document contains scope, threat boundary, contracts and axes. Post: D02 can consume the frozen scope.",
+  "evidence": [
+    "checks.md; source-plan excerpt in docs/tasks/D01.md; deliverable hash in inputs.json"
+  ]
+}

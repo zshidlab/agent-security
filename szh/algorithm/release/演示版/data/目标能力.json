@@ -1,0 +1,15 @@
+{
+  "schema_version":"capability-1.0",
+  "agent_config_id":"mini-executor-d04-v1",
+  "maintainer":"OAPT_A/szh",
+  "changed_on":"2026-10-17",
+  "implementation":"algorithm/src/mini_executor.py",
+  "scope":"in-memory synthetic only",
+  "tools":[
+    {"name":"read_notification","parameters":{"type":"object","required":["notification_id"],"properties":{"notification_id":{"type":"string","minLength":1}},"additionalProperties":false},"resource_type":"notifications","resource_parameter":"notification_id","effect":"read_only","permissions":{"mode":"local_lookup_no_subject_check","subjects":[]},"preconditions":["resource_exists"],"observables":["tool","request","result","error","before","after"],"trust":"low_trust_external_text"},
+    {"name":"read_file","parameters":{"type":"object","required":["file_id"],"properties":{"file_id":{"type":"string","minLength":1}},"additionalProperties":false},"resource_type":"files","resource_parameter":"file_id","effect":"read_only","permissions":{"mode":"local_lookup_no_subject_check","subjects":[]},"preconditions":["resource_exists"],"observables":["tool","request","result","error","before","after"],"trust":"low_trust_external_text"},
+    {"name":"modify_appointment","parameters":{"type":"object","required":["appointment_id","new_time"],"properties":{"appointment_id":{"type":"string","minLength":1},"new_time":{"type":"string","minLength":1},"subject":{"type":"string","default":"synthetic-agent"}},"additionalProperties":false},"resource_type":"appointments","resource_parameter":"appointment_id","effect":"write_time","permissions":{"mode":"subject_allowlist","subjects":["synthetic-agent"]},"preconditions":["resource_exists","new_time_nonempty_string"],"observables":["tool","request","result","error","before","after"],"trust":"state_mutation"},
+    {"name":"view_result","parameters":{"type":"object","required":["appointment_id"],"properties":{"appointment_id":{"type":"string","minLength":1}},"additionalProperties":false},"resource_type":"appointments","resource_parameter":"appointment_id","effect":"read_only","permissions":{"mode":"local_lookup_no_subject_check","subjects":[]},"preconditions":["resource_exists"],"observables":["tool","request","result","error","before","after"],"trust":"local_state_read"}
+  ],
+  "observation_limits":["before/after are independent copies of local executor memory only","no confirmation enforcement in D04 executor","read operations have no subject parameter and no role enforcement","new_time is any nonempty string; no calendar syntax validation","result/error are conditional fields; absence is retained","without state snapshots no automatic effect confirmation","request/attempt/blocked/effect/violated are distinct; read effect Unknown is not a safety result"]
+}

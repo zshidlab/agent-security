@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-17T03:48:58.876333+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "algorithm/tests/test_d20_check_step.py",
+    "algorithm/tests/test_d18_step_table.py",
+    "algorithm/tests/test_d19_judgment_examples.py",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": ".........                                                                [100%]\n9 passed in 0.15s\n",
+  "stderr": ""
+}

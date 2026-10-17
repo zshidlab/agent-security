@@ -543,7 +543,8 @@
         "algorithm/data/split-manifest.json"
       ],
       "test": "algorithm/tests/test_d10_group_split.py",
-      "evidence_pattern": "records/D10/<run-id>/"
+      "evidence_pattern": "records/D10/<run-id>/",
+      "implementation_note": "开发文件保存已查看/已标注来源组完整池；selected_for_development 精确标记20条工作子集，余下同组变体仍在开发侧。源字段不变；防止参考标注泄漏；D09隔日复查待完成。"
     },
     {
       "id": "D11",

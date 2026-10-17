@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:46:28.580090+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/build_step_table.py",
+    "--output",
+    "records/D18/20261017T034611+0800-first/testplan.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"steps\": 1, \"scope\": \"local_synthetic_only\"}\n",
+  "stderr": ""
+}

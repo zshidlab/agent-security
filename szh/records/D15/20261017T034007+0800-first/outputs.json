@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T03:40:34.200764+08:00",
+  "deliverables_sha256": {
+    "algorithm/results/图抽取初测.csv": "cad4bef164d87347ad181aee5ada6128633a3d4f1e7c14bb052759c09b37d7dc",
+    "algorithm/src/evaluate_graph.py": "6f6ffd30c7386a9bb74c8325917d487a799b30e356cea7dda9867fdf12adb24a"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

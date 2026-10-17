@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-17T03:36:27.778619+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "algorithm/tests/test_d11_parse_trace.py",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "...                                                                      [100%]\n3 passed in 0.03s\n",
+  "stderr": ""
+}

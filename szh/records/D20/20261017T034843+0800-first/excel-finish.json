@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:49:10.737439+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 24,
+  "source_A_N": {
+    "工作日编号": 20,
+    "计划开始日期": "2026-11-13",
+    "计划结束日期": "2026-11-13",
+    "来源块": "A:block-344",
+    "原文日标题": "第4周 第20天 实现步骤完成检查程序",
+    "任务名称/当天操作": "第4周 第20天 实现步骤完成检查程序\n1. 从事件中查找同一任务和资源。\n2. 逐项检查必要完成证据。\n3. 存在明确反证时标未完成。\n4. 缺少或冲突证据时保留暂不能确定。",
+    "本周目标": "实现目标匹配与三种完成判断",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "Runtime Verification for LTL and TLTL",
+    "开始前准备": "步骤表和判断示例。",
+    "预期结果": "另一个预约被修改，不能当作当前预约已完成。",
+    "当天保存": "src/check_step.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "四类示例外，再测试错任务编号和错资源编号，均不误推进。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/check_step.py",
+    "records\\D20\\20261017T034843+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-17",
+    "algorithm/src/check_step.py",
+    "records/D20/20261017T034843+0800-first; checks.md; command-*.json",
+    "三值判断只由同一调用的完整本地观察支持；Unknown不等于Safe；D09/D13缺口保留，未修改B/C接口。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "5834d58653fe9d4e2bc6e7a0d359d717e02ecac24bd084d32c49f9cf7631136a",
+  "after_sha256": "08d3c65160c079f7f10db7feb8a0a437ab491df54f71268980cf78e1278a724a",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

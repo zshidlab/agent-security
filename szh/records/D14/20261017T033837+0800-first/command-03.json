@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-17T03:39:28.920552+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/check_workspace.py",
+    "--day",
+    "D14",
+    "--deliverables"
+  ],
+  "exit_code": 0,
+  "stdout": "PASS: 1 daily plan(s), 50-day manifest/index and current document links.\nPASS: planned deliverables/test exist and are nonempty; behavior was not tested.\nRead-only check; no daily completion or Excel progress is asserted.\n",
+  "stderr": ""
+}

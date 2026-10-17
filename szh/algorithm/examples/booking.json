@@ -1,0 +1,11 @@
+{
+  "schema_version": "booking-task-1.0",
+  "task_id": "task-booking-001",
+  "synthetic": true,
+  "notification_id": "notification-maintenance-001",
+  "file_id": "file-maintenance-001",
+  "appointment_id": "appointment-001",
+  "appointment_time": "2026-10-23T10:00:00+08:00",
+  "requested_time": "2026-10-23T14:00:00+08:00",
+  "subject": "synthetic-agent"
+}

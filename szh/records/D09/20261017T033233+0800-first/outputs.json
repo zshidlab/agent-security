@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T03:32:58.250097+08:00",
+  "deliverables_sha256": {
+    "algorithm/说明/如何划分步骤.md": "218c0b15cd885bddbad7e6a5584a8129121b1427600d484d9080a2c2e6345486",
+    "algorithm/data/标注自查.jsonl": "13aa83379050e163c5ea1e430da7bee55061a914e4297ee136df813f8c584f07"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

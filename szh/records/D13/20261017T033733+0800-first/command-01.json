@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:38:15.694743+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/model_extract.py",
+    "--output",
+    "records/D13/20261017T033733+0800-first/offline-calls.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"offline_inputs\": 20, \"accepted_structure\": 20, \"real_model_calls\": 0}\n",
+  "stderr": ""
+}

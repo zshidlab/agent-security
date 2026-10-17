@@ -1,0 +1,21 @@
+{
+  "temp_root": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh",
+  "copy_source": "algorithm/",
+  "commands": [
+    {
+      "command": "D:\\anaconda\\python.exe -B run_demo.py --task booking --output-dir C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh\\valid",
+      "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh\\project",
+      "returncode": 0,
+      "stdout": "{\"output\": \"C:\\\\Users\\\\15790\\\\AppData\\\\Local\\\\Temp\\\\oapt-a-d05-clean-_qw22tyh\\\\valid\\\\demo-output.json\", \"event_count\": 13, \"changed_time\": \"2026-10-23T14:00:00+08:00\", \"reset_time\": \"2026-10-23T10:00:00+08:00\"}\n",
+      "stderr": "",
+      "output_file": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh\\valid\\demo-output.json"
+    },
+    {
+      "command": "D:\\anaconda\\python.exe -B run_demo.py --task C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh\\bad.json --output-dir C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh\\bad-out",
+      "cwd": "C:\\Users\\15790\\AppData\\Local\\Temp\\oapt-a-d05-clean-_qw22tyh\\project",
+      "returncode": 2,
+      "stdout": "",
+      "stderr": "ERROR: missing task fields at $: notification_id, file_id, appointment_id, requested_time, subject\n"
+    }
+  ]
+}

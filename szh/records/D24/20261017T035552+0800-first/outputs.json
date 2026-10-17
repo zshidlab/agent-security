@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:56:53.483305+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/budget.py": "9849a1639023c34ba4a260c8d617053d10ae43c7256771e1a7313b14cee4b40e"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

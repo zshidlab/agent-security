@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:27:06.171991+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 11,
+  "source_A_N": {
+    "工作日编号": 7,
+    "计划开始日期": "2026-10-27",
+    "计划结束日期": "2026-10-27",
+    "来源块": "A:block-188",
+    "原文日标题": "第2周 第7天 筛出真正能够使用的轨迹",
+    "任务名称/当天操作": "第2周 第7天 筛出真正能够使用的轨迹\n1. 排除重复、只有单句和缺少回复的记录。\n2. 按原案例及改写变体设置同一组号。\n3. 统计候选到可建图的各步数量。\n4. 把不完整但仍有价值的记录另存。",
+    "本周目标": "收集真实轨迹并建立个人标注说明",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "PROV O The PROV Ontology",
+    "开始前准备": "候选清单。",
+    "预期结果": "一条原始案例的三个改写只有一个来源组。",
+    "当天保存": "data/筛选结果.csv。另保存当天的实际命令和执行记录。",
+    "验收标准": "每个排除有理由，组号无遗漏，计数前后能对上。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "未开始",
+    0,
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/data/筛选结果.csv",
+    "records\\D07\\20261017T032704+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "83a19c15a65596712059680dd39f6edbbd33371389f4aea6526c9eb5418327c1",
+  "after_sha256": "f792d02696e2af7d75eed5c6373d0e509f5dbf2e1dcbc1f49e1c5f3f1a79e5c8",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

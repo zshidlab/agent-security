@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:33:04.363753+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 14,
+  "source_A_N": {
+    "工作日编号": 10,
+    "计划开始日期": "2026-10-30",
+    "计划结束日期": "2026-10-30",
+    "来源块": "A:block-224",
+    "原文日标题": "第2周 第10天 冻结可用数据和开发样本",
+    "任务名称/当天操作": "第2周 第10天 冻结可用数据和开发样本\n1. 把同一来源组整体放入开发或留出文件。\n2. 先选20条开发用轨迹。\n3. 保存其余留出数据不用于改提示。\n4. 记录实际数量不足时能研究什么。",
+    "本周目标": "收集真实轨迹并建立个人标注说明",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "On Over fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "开始前准备": "筛选结果与标注说明。",
+    "预期结果": "开发集和留出集没有同一原始案例的变体。",
+    "当天保存": "data/开发集.jsonl 和 data/留出集.jsonl。另保存当天的实际命令和执行记录。",
+    "验收标准": "两文件组号交集为空；不足200条合格轨迹时报告真实缺口。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "未开始",
+    0,
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/data/开发集.jsonl; algorithm/data/留出集.jsonl; algorithm/data/split-manifest.json",
+    "records\\D10\\20261017T033303+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "9df4ab682c1a5389b8337827e74d1db235eec0719aece0d5a011d50ca6121547",
+  "after_sha256": "b05fbf479336c17cf0cac8592fdfb6c5c36461c56176ce24f81940255a493901",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:40:35.331318+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 19,
+  "source_A_N": {
+    "工作日编号": 15,
+    "计划开始日期": "2026-11-06",
+    "计划结束日期": "2026-11-06",
+    "来源块": "A:block-284",
+    "原文日标题": "第3周 第15天 计算当前抽取究竟准不准",
+    "任务名称/当天操作": "第3周 第15天 计算当前抽取究竟准不准\n1. 先固定什么算同一个步骤。\n2. 统计正确、多提、漏提的节点。\n3. 同样统计关系并按类型列出。\n4. 保存每个错误的原文位置。",
+    "本周目标": "实现步骤抽取与证据检查",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "On Over fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "开始前准备": "人工示范图和程序输出。",
+    "预期结果": "节点正确8个、多提2个、漏提1个，能从清单复算指标。",
+    "当天保存": "results/图抽取初测.csv。另保存当天的实际命令和执行记录。",
+    "验收标准": "原始计数、公式和错误清单齐全，不能仅写一个准确率。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/results/图抽取初测.csv; algorithm/src/evaluate_graph.py",
+    "records\\D15\\20261017T034007+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-17",
+    "algorithm/results/图抽取初测.csv; algorithm/src/evaluate_graph.py",
+    "records/D15/20261017T034007+0800-first; checks.md; command-*.json",
+    "单人开发参考且D09重标待完成；D13真实模型未调用；仅规则初测，不证明模型质量或泛化。B/C接口不变。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "225b990baf85411c45938ae6a906e468d165b4d488011c85875f50d397ce397c",
+  "after_sha256": "0fdf97ead6a4646e5e8cf6f4325cffcd9af87792ec2ab5a023ee65846021d1d9",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

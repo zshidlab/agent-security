@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-17T04:00:28.537635+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/verify_demo_release.py",
+    "--package",
+    "algorithm/release/演示版",
+    "--output",
+    "records/D25/20261017T040001+0800-first/isolated-demo"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"isolated_cases\": 3, \"exit_codes\": [0, 0, 0]}\n",
+  "stderr": "Exception in thread Thread-5 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\anaconda\\Lib\\threading.py\", line 1075, in _bootstrap_inner\n    self.run()\n  File \"D:\\anaconda\\Lib\\threading.py\", line 1012, in run\n    self._target(*self._args, **self._kwargs)\n  File \"D:\\anaconda\\Lib\\subprocess.py\", line 1599, in _readerthread\n    buffer.append(fh.read())\n                  ^^^^^^^^^\n  File \"<frozen codecs>\", line 322, in decode\nUnicodeDecodeError: 'utf-8' codec can't decode byte 0xb9 in position 92: invalid start byte\n"
+}

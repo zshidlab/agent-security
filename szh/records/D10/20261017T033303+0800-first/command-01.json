@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:34:26.189461+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/group_split.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"development_count\": 96, \"working_subset_count\": 20, \"holdout_count\": 75, \"qualified_gap_to_200\": 29}\n",
+  "stderr": ""
+}

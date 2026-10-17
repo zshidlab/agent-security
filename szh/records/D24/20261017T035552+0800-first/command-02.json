@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-17T03:56:23.809260+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "algorithm/src/budget.py",
+    "--output",
+    "records/D24/20261017T035552+0800-first/budget-runs.jsonl"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\budget.py\", line 111, in <module>\n    rows = [run_budgeted_path(two_step_plan(), demo_adapter('normal'), limited),\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\budget.py\", line 96, in run_budgeted_path\n    result = retry_step(step, adapter, executor=executor, observer_mode=observer_mode,\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\retry_policy.py\", line 63, in retry_step\n    event = (meter.call('target', local_target, executor, read['result']['body'], reference=candidate_id)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\budget.py\", line 52, in call\n    if self.used[kind] >= self.limits[kind]: self.deny(kind + '_budget', kind, reference)\n                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\Vehicle-Agent-Security\\agent-security\\szh\\algorithm\\src\\budget.py\", line 37, in deny\n    raise BudgetExceeded(reason)\nBudgetExceeded: target_budget\n"
+}

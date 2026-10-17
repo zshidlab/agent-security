@@ -1,0 +1,10 @@
+{
+  "schema_version": "trace-1.0",
+  "source": {"source_id": "source-duplicate", "source_group": "synthetic_fixture"},
+  "synthetic": true,
+  "task_id": "task-duplicate",
+  "turns": [
+    {"turn_id": "turn-001", "messages": [], "events": [{"event_id": "event-001", "event_type": "tool_request", "tool_call_id": "call-001", "tool": "read_notification", "request": {}, "attempt": "Unknown", "blocked": null, "effect": "Unknown", "violated": "Unknown", "missing_reason": "fixture"}]},
+    {"turn_id": "turn-001", "messages": [], "events": []}
+  ]
+}

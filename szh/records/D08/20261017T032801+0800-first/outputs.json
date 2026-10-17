@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:31:57.554808+08:00",
+  "deliverables_sha256": {
+    "algorithm/data/人工示范图.jsonl": "cea7d534ff50d088c76dea543def142c7387f6cb06d54525bee575e6b88be8f6"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

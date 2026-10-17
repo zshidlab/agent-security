@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:56:58.871003+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 28,
+  "source_A_N": {
+    "工作日编号": 24,
+    "计划开始日期": "2026-11-19",
+    "计划结束日期": "2026-11-19",
+    "来源块": "A:block-392",
+    "原文日标题": "第5周 第24天 限制轮数和调用费用",
+    "任务名称/当天操作": "第5周 第24天 限制轮数和调用费用\n1. 给模型生成和目标执行分别计数。\n2. 调用前检查剩余预算。\n3. 每条路径设置最大轮数。\n4. 达到上限写停止记录并保留未执行候选。",
+    "本周目标": "完成逐步生成 重试与预算控制",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "AutoDojo 论文 官方代码；On Over fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+    "开始前准备": "重试程序和调用日志。",
+    "预期结果": "预算只剩一次时，程序不会偷偷再调用两次。",
+    "当天保存": "src/budget.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "计数与原始调用日志一致，超限测试会在调用前被挡住。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    80,
+    "2026-10-17",
+    "",
+    "algorithm/src/budget.py",
+    "records/D24/20261017T035552+0800-first; checks.md; command-*.json",
+    "尚未验收；统一CLI模块入口并增加子进程回归后新run复测。D09/D13缺口保留，无B/C接口修改。"
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/budget.py",
+    "records\\D24\\20261017T035657+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "d61598e4ca9c0d6529b2b23cd1ebbfd4e84418b1fe974233feca6b3fc1b4262a",
+  "after_sha256": "e6bea531656455b70097bdfc2faa5394d1d03ed8a29fbb152ecc6a91448d5a1d",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

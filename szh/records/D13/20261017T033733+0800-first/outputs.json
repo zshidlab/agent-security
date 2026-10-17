@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-10-17T03:38:25.869977+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/model_extract.py": "8fe522ff4950135a3f829a844ecc9278a3c78fbe0b028a5e59e624722aefd649",
+    "algorithm/data/model-replies-fixture.jsonl": "a773b8d73eab0ea17e57166dc4b222a102fdafa9aa43ff1b8e040c9868b6c4f5"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:32:59.566891+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 13,
+  "source_A_N": {
+    "工作日编号": 9,
+    "计划开始日期": "2026-10-29",
+    "计划结束日期": "2026-10-29",
+    "来源块": "A:block-212",
+    "原文日标题": "第2周 第9天 编写容易照着用的标注说明",
+    "任务名称/当天操作": "第2周 第9天 编写容易照着用的标注说明\n1. 解释什么时候划分新步骤。\n2. 给先后、依赖、未知各写两个例子。\n3. 写缺少工具结果时如何处理。\n4. 隔一天重新标五条并记录自己的不一致。",
+    "本周目标": "收集真实轨迹并建立个人标注说明",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "Automated Generation and Analysis of Attack Graphs",
+    "开始前准备": "十条示范图。",
+    "预期结果": "自查发现两种划分不同，说明中补上边界规则。",
+    "当天保存": "说明/如何划分步骤.md。另保存当天的实际命令和执行记录。",
+    "验收标准": "只有单人自查就如实记录，不填写双人一致性数字。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/说明/如何划分步骤.md; algorithm/data/标注自查.jsonl",
+    "records\\D09\\20261017T033233+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "阻塞",
+    75,
+    "2026-10-17",
+    "",
+    "algorithm/说明/如何划分步骤.md; algorithm/data/标注自查.jsonl",
+    "records/D09/20261017T033233+0800-first; checks.md; command-*.json",
+    "2026-10-17 发现真实时间门槛：首次标注后至少24小时再独立重标五条并记录差异方可解除；无双人一致性。后续可独立离线部分继续，B/C接口不变。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "0530cd9e61fed9a5022d1eb9262bfc221a0b5f8b47eb4a6091f5d9c179de800b",
+  "after_sha256": "9df4ab682c1a5389b8337827e74d1db235eec0719aece0d5a011d50ca6121547",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

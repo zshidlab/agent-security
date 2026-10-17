@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:37:35.115146+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 17,
+  "source_A_N": {
+    "工作日编号": 13,
+    "计划开始日期": "2026-11-04",
+    "计划结束日期": "2026-11-04",
+    "来源块": "A:block-260",
+    "原文日标题": "第3周 第13天 加入语言模型辅助抽取",
+    "任务名称/当天操作": "第3周 第13天 加入语言模型辅助抽取\n1. 把每段原文与需要填写的字段发给模型。\n2. 要求输出步骤及证据编号。\n3. 先用格式检查程序读结果。\n4. 对不存在的证据编号直接拒收并保留原回复。",
+    "本周目标": "实现步骤抽取与证据检查",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "JSON Schema Draft 2020 12；PROV O The PROV Ontology",
+    "开始前准备": "规则结果和20条开发轨迹。",
+    "预期结果": "模型生成了不存在的第99条事件，该节点被拒收。",
+    "当天保存": "src/model_extract.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "每次调用和解析失败有记录，格式修复最多两次。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "未开始",
+    0,
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "saved_reopened_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/model_extract.py; algorithm/data/model-replies-fixture.jsonl",
+    "records\\D13\\20261017T033733+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "66591d7d742021ea27218a2ed239b1d69e607b8932ef8c83294e99a59c993b6e",
+  "after_sha256": "3e669afd941f4835f2cd7544fbafcecef8952776122a80fe20dfcb22ad8a0200",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

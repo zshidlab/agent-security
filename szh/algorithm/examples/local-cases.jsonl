@@ -1,0 +1,10 @@
+{"case_id":"local-01","mode":"normal","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"path_completed","expected_steps":2,"synthetic":true}
+{"case_id":"local-02","mode":"normal","new_time":"2026-10-23T15:00:00+08:00","expected_stop":"path_completed","expected_steps":2,"synthetic":true}
+{"case_id":"local-03","mode":"normal","new_time":"2026-10-24T14:00:00+08:00","expected_stop":"path_completed","expected_steps":2,"synthetic":true}
+{"case_id":"local-04","mode":"normal","new_time":"2026-10-25T14:00:00+08:00","expected_stop":"path_completed","expected_steps":2,"synthetic":true}
+{"case_id":"local-05","mode":"rejected_surface","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"candidate_rejected","expected_steps":1,"synthetic":true}
+{"case_id":"local-06","mode":"malformed","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"candidate_rejected","expected_steps":1,"synthetic":true}
+{"case_id":"local-07","mode":"no_action","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"Unknown","expected_steps":1,"synthetic":true}
+{"case_id":"local-08","mode":"normal","observer_mode":"missing_after","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"Unknown","expected_steps":1,"synthetic":true}
+{"case_id":"local-09","mode":"denied_subject","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"Unknown","expected_steps":1,"synthetic":true}
+{"case_id":"local-10","mode":"refusal","new_time":"2026-10-23T14:00:00+08:00","expected_stop":"False","expected_steps":1,"synthetic":true}

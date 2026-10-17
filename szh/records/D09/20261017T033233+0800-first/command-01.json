@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:32:47.272866+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/freeze_annotation_first.py"
+  ],
+  "exit_code": 0,
+  "stdout": "Five first annotations frozen; second annotation NOT performed.\n",
+  "stderr": ""
+}

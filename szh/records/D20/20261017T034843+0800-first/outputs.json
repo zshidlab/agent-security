@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:49:09.572049+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/check_step.py": "91dab90db23a19c30dc3c34bcca6951d24c41673c7b86c496333b5ad1bf8c04f"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

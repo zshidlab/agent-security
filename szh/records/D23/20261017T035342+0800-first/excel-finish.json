@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-17T03:54:13.621741+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 27,
+  "source_A_N": {
+    "工作日编号": 23,
+    "计划开始日期": "2026-11-18",
+    "计划结束日期": "2026-11-18",
+    "来源块": "A:block-380",
+    "原文日标题": "第5周 第23天 加入失败后的有限重试",
+    "任务名称/当天操作": "第5周 第23天 加入失败后的有限重试\n1. 为未完成设置换候选规则。\n2. 为暂不能确定设置补观察或停止规则。\n3. 每步最多三候选。\n4. 记录每次重试而不是覆盖第一次结果。",
+    "本周目标": "完成逐步生成 重试与预算控制",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "AutoDojo 论文 官方代码",
+    "开始前准备": "本地闭环程序。",
+    "预期结果": "连续三次没有必要证据后停止，理由为观察不足。",
+    "当天保存": "src/retry_policy.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "拒绝、缺失和超时三类都能在预算内停止。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "进行中",
+    0,
+    "2026-10-17",
+    "",
+    "algorithm/src/retry_policy.py",
+    "records\\D23\\20261017T035342+0800-first",
+    "实际提前执行；不改变源排期。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-17",
+    "algorithm/src/retry_policy.py",
+    "records/D23/20261017T035342+0800-first; checks.md; command-*.json",
+    "超时为本地适配器抛出TimeoutError的确定性故障测试，不宣称可强制中断任意阻塞外部调用；仅固定策略本地状态。D09/D13缺口持续，无B/C接口修改。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "cca1f4dad4481b6173e1291e6f51b5c460f92050051d64edbaecf599f2913a6b",
+  "after_sha256": "97ff337e44221181f112cc53afad678fd62e2df2c6ff9c26d8d53503da0affd5",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

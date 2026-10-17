@@ -1,0 +1,9 @@
+# OAPT_A D02 实际环境记录（2026-10-17）
+# 依赖用于本地合成输入；不需要网络、模型密钥或外部服务。
+python==3.12.7
+jsonschema==4.23.0
+pytest==7.4.4
+
+# 验证命令（从 szh/）：
+# python -B -c "import jsonschema,pytest,sys; print(sys.version); print(jsonschema.__version__); print(pytest.__version__)"
+# python -B -m pytest -p no:cacheprovider algorithm/tests/test_d02_environment.py -q

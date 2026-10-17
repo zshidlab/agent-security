@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-17T03:50:22.421080+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/generate_one_step.py": "3a32e70b2024f2cf07ddc4c26ad41fbca9cc28438c2cbe762fe52e8b65186f92"
+  },
+  "evidence_scope": "Public research artifacts or local synthetic execution only",
+  "request": "See actual artifact",
+  "attempt": "See actual artifact",
+  "blocked": "See actual artifact",
+  "effect": "Unknown outside local observable state",
+  "violated": "Unknown outside local observable state"
+}

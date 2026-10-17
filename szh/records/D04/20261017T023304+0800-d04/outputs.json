@@ -1,0 +1,12 @@
+{
+  "day": "D04",
+  "status": "implementation verified",
+  "deliverables": [
+    "algorithm/src/mini_executor.py"
+  ],
+  "test": "2 passed",
+  "contract": "Pre: D02/D03 interfaces. Goal: implement local dictionary executor. Invariant: only synthetic in-memory dictionaries are touched; blocked calls leave state unchanged. Observe: request/attempt/blocked/effect/violated plus before/after state diff. Post: D05 demo can invoke four tools and reset.",
+  "evidence": [
+    "checks.md; pytest output; state before/after and reset assertions"
+  ]
+}
