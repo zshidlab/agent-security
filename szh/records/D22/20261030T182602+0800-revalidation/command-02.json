@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T18:34:57.464394+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "D:\\anaconda\\python.exe",
+    "-B",
+    "algorithm/src/run_local_pipeline.py",
+    "--output",
+    "records\\D22\\20261030T182602+0800-revalidation\\run_local_pipeline.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"runs\": 10, \"terminal\": [\"path_completed\", \"path_completed\", \"path_completed\", \"path_completed\", \"candidate_rejected\", \"candidate_rejected\", \"Unknown\", \"Unknown\", \"Unknown\", \"False\"], \"real_model_calls\": 0}\n",
+  "stderr": ""
+}

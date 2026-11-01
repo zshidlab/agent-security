@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.631762+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/match_target.py": "223b3e3aa9ae97d945269e2f8407dd2559de33d6247aacdad07ee32d301c31fd"
+  },
+  "actual_results": "4项测试通过；命令示例兼容1条、拒绝4条；null等非对象参数被拒绝且后续有效候选继续处理。",
+  "limitations": "先硬筛选再排序；拒绝原因保留；仅合成目标能力匹配。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

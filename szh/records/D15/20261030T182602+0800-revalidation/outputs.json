@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-30T19:17:18.622102+08:00",
+  "deliverables_sha256": {
+    "algorithm/results/图抽取初测.csv": "cad4bef164d87347ad181aee5ada6128633a3d4f1e7c14bb052759c09b37d7dc",
+    "algorithm/src/evaluate_graph.py": "9b7180e0256fcd5f3e41906b5e66dcfe9324a0b7d4e8a45d2e4240626766ac79"
+  },
+  "actual_results": "3项测试通过；10张冻结v1参考图、30行分项指标、9个错误；节点TP/FP/FN=34/0/0，时序35/0/0，依赖0/0/9。",
+  "limitations": "单标注者参考图及规则抽取存在关联偏差；D9后来复标未覆盖冻结v1，D13真实模型另列；不声称语义依赖抽取质量提升。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

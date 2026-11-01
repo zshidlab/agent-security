@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T18:34:55.652330+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "D:\\anaconda\\python.exe",
+    "-B",
+    "algorithm/src/check_graph.py",
+    "--output",
+    "records\\D14\\20261030T182602+0800-revalidation\\check_graph.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"checked\": 40, \"Invalid_retained\": 4, \"real_model_graphs\": 0}\n",
+  "stderr": ""
+}

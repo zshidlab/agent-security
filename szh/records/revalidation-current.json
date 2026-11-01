@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-10-30T18:26:02.504188+08:00",
+  "records": {
+    "9": "records/D09/20261030T182602+0800-revalidation",
+    "13": "records/D13/20261030T182602+0800-revalidation",
+    "14": "records/D14/20261030T182602+0800-revalidation",
+    "15": "records/D15/20261030T182602+0800-revalidation",
+    "16": "records/D16/20261030T182602+0800-revalidation",
+    "17": "records/D17/20261030T182602+0800-revalidation",
+    "18": "records/D18/20261030T182602+0800-revalidation",
+    "19": "records/D19/20261030T182602+0800-revalidation",
+    "20": "records/D20/20261030T182602+0800-revalidation",
+    "21": "records/D21/20261030T182602+0800-revalidation",
+    "22": "records/D22/20261030T182602+0800-revalidation",
+    "23": "records/D23/20261030T182602+0800-revalidation",
+    "24": "records/D24/20261030T182602+0800-revalidation",
+    "25": "records/D25/20261030T182602+0800-revalidation"
+  },
+  "workbook_before_sha256": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86"
+}

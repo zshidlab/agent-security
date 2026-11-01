@@ -50,6 +50,8 @@ def local_target(executor, text):
         return None
     cap = json.loads((ROOT / 'data/目标能力.json').read_text(encoding='utf8'))
     allowed = {t['name']: t for t in cap['tools'] if t['name'] in ('modify_appointment', 'view_result')}
+    if not isinstance(command['tool'], str):
+        return None
     tool = allowed.get(command['tool'])
     if not tool or list(Draft202012Validator(tool['parameters']).iter_errors(command['arguments'])):
         return None
@@ -70,6 +72,23 @@ def demo_adapter(mode):
     return reply
 
 
+def preflight(step, state, *, guard_available=True):
+    """Read the current local state before generation or any target invocation."""
+    reason = None
+    if not guard_available:
+        reason = 'guard_unavailable'
+    else:
+        for pre in step['contract']['Pre']:
+            try:
+                value = state[pre['collection']][pre['resource_id']][pre['field']]
+            except (KeyError, TypeError):
+                reason = 'precondition_unobservable'; break
+            if value != pre['equals']:
+                reason = 'precondition_conflict'; break
+    return {'allowed': reason is None, 'reason': reason, 'before': deepcopy(state),
+            'required': deepcopy(step['contract']['Pre']), 'target_invoked': False}
+
+
 def run_pipeline(plan, *, adapter, executor=None, run_id=None, observer_mode='full'):
     Draft202012Validator(SCHEMA).validate(plan)
     run_id = run_id or 'local-' + uuid4().hex
@@ -87,23 +106,32 @@ def run_pipeline(plan, *, adapter, executor=None, run_id=None, observer_mode='fu
         if row['budget']['tool_calls'] + 2 > plan['budget']['max_calls']:
             row['stop_reason'] = 'budget_exhausted'; break
         seen.add(current); step = steps[current]
+        gate = preflight(step, executor.state, guard_available=observer_mode != 'guard_unavailable')
+        if not gate['allowed']:
+            row['steps'].append({'step_id': current, 'candidate': None, 'surface_read': None,
+                                 'event': None, 'judgment': None, 'preflight': gate})
+            row['stop_reason'] = 'Unknown' if gate['reason'] == 'guard_unavailable' else gate['reason']; break
         candidate = generate_one_step(step, history, SURFACE, adapter,
                                       candidate_id=f'{run_id}:c{len(row["steps"])+1}')
         candidate['run_id'] = run_id; row['budget']['generation_calls'] += 1
-        item = {'step_id': current, 'candidate': candidate, 'surface_read': None, 'event': None, 'judgment': None}
+        item = {'step_id': current, 'candidate': candidate, 'surface_read': None, 'event': None,
+                'judgment': None, 'preflight': gate}
         row['steps'].append(item)
         if candidate['status'] != 'accepted':
             row['stop_reason'] = 'candidate_rejected'; break
+        item['preflight'] = preflight(step, executor.state, guard_available=observer_mode != 'guard_unavailable')
+        if not item['preflight']['allowed']:
+            row['stop_reason'] = item['preflight']['reason']; break
         # Only the authorized body in this reset in-memory executor is replaced.
         executor.state[SURFACE['kind']][SURFACE['resource_id']][SURFACE['field']] = candidate['candidate']['text']
         read = executor.read_notification(SURFACE['resource_id']); row['budget']['tool_calls'] += 1
         item['surface_read'] = read
         before = deepcopy(executor.state)
         event = local_target(executor, read['result']['body'])
+        row['budget']['tool_calls'] += 1
         if event is None:
             judgment = check_step(step, [], call_id=f'{run_id}:call{len(row["steps"])}')
         else:
-            row['budget']['tool_calls'] += 1
             evidence = bind_event(step, event, evidence_id=f'{run_id}:e{len(row["steps"])}')
             evidence.update(before=before, after=deepcopy(executor.state), run_id=run_id,
                             call_id=f'{run_id}:call{len(row["steps"])}')

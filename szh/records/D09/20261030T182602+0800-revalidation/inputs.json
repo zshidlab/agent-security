@@ -1,0 +1,15 @@
+{
+  "day": "D09",
+  "started": "2026-10-30T18:26:02.413451+08:00",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "authority": "User authorized D09/D13 closure and sequential D14-D25 revalidation; workbook writes only after ALL acceptance passes.",
+  "schema": "daily-revalidation-1.0",
+  "source_block": 212,
+  "input_hashes": {
+    "docs\\tasks\\D09.md": "b86382f911bd57eb1f882ef5149ac4be173efaca84658797ec40ae27dbf6138a",
+    "docs\\tasks\\manifest.json": "c14f9d91429f40f8a315e153d8c0e34b186b9ea3d1269d2cbaae73207bafa11c",
+    "algorithm\\说明\\如何划分步骤.md": "218c0b15cd885bddbad7e6a5584a8129121b1427600d484d9080a2c2e6345486",
+    "algorithm\\data\\标注自查.jsonl": "13aa83379050e163c5ea1e430da7bee55061a914e4297ee136df813f8c584f07"
+  },
+  "original_start_preserved": true
+}

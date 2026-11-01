@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.647351+08:00",
+  "deliverables_sha256": {
+    "algorithm/data/阶段判断示例.jsonl": "677aadc1a865ea44ddd0f24dd8084b6a3cf9f88daee7d39c4f5964bf3259cab1"
+  },
+  "actual_results": "3项测试通过；6个完整三值样例保留真、假、缺失、冲突，单独模型文本判Unknown。",
+  "limitations": "样例是合成判断用例，不是攻击成功率统计。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

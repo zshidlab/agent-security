@@ -1,0 +1,123 @@
+{
+  "schema_version": "annotation-difference-1.0",
+  "count": 5,
+  "differences": [
+    {
+      "source_id": "AL-181",
+      "elapsed_hours": 326.942829995,
+      "changed": true,
+      "differences": {
+        "edges": {
+          "first": [
+            [
+              "AL-181:n00",
+              "AL-181:n01",
+              "temporal",
+              ""
+            ]
+          ],
+          "second": [
+            [
+              "AL-181:n00",
+              "AL-181:n01",
+              "dependency",
+              "External_0"
+            ],
+            [
+              "AL-181:n00",
+              "AL-181:n01",
+              "temporal",
+              ""
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_id": "AL-002",
+      "elapsed_hours": 326.94283030583335,
+      "changed": false,
+      "differences": {}
+    },
+    {
+      "source_id": "AL-010",
+      "elapsed_hours": 326.94283030583335,
+      "changed": true,
+      "differences": {
+        "edges": {
+          "first": [
+            [
+              "AL-010:n00",
+              "AL-010:n01",
+              "temporal",
+              ""
+            ],
+            [
+              "AL-010:n00",
+              "AL-010:n02",
+              "temporal",
+              ""
+            ],
+            [
+              "AL-010:n01",
+              "AL-010:n02",
+              "temporal",
+              ""
+            ]
+          ],
+          "second": [
+            [
+              "AL-010:n00",
+              "AL-010:n01",
+              "temporal",
+              ""
+            ],
+            [
+              "AL-010:n00",
+              "AL-010:n02",
+              "dependency",
+              "www.invite-verify-9xq.com/DORA_INVITE_TOKEN_9XQ"
+            ],
+            [
+              "AL-010:n00",
+              "AL-010:n02",
+              "temporal",
+              ""
+            ],
+            [
+              "AL-010:n01",
+              "AL-010:n02",
+              "dependency",
+              "DORA_INVITE_TOKEN_9XQ"
+            ],
+            [
+              "AL-010:n01",
+              "AL-010:n02",
+              "temporal",
+              ""
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "source_id": "AL-014",
+      "elapsed_hours": 326.94283062,
+      "changed": false,
+      "differences": {}
+    },
+    {
+      "source_id": "AL-019",
+      "elapsed_hours": 326.94283062,
+      "changed": false,
+      "differences": {}
+    }
+  ],
+  "changed_sources": 2,
+  "boundary_changes": [
+    "Tool-call boundary unchanged; role-like instructions inside results remain low-trust data.",
+    "Explicit copied injected URL/token can support observed dataflow even when it grants no permission.",
+    "Tool errors remain steps with unknown independent state effect; parallel requests have no mutual order."
+  ],
+  "scope": "Single Codex annotator across sessions; no double-annotator agreement or real effect claim."
+}

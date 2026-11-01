@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-30T19:17:18.481859+08:00",
+  "deliverables_sha256": {
+    "algorithm/说明/如何划分步骤.md": "994e5444af78287ac4c70a9e5d8dea88c8ca422f9765e01075d1fe9e02241ba4",
+    "algorithm/data/标注自查.jsonl": "ca24d3d35183357ada19d2022e3f946c181941e42a58a480f81b863b4b3a931f"
+  },
+  "actual_results": "5条真实隔日复标，最短326.94小时，2条来源的依赖关系发生变化；首次/第二次标注与逐项差异均保留，3项行为测试通过。",
+  "limitations": "同一Codex标注者跨会话自查，有先前熟悉度；不是人工金标、双盲或双人一致率。源K期待两种划分不同，本次节点边界未变，仅关系变化，已如实保留并待导师复核；源M单人自查要求满足。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

@@ -12,5 +12,5 @@
   "recall": "TP/(TP+FN)",
   "F1": "2TP/(2TP+FP+FN)",
   "zero_denominator": "null/undefined, including empty graphs; retain all counts",
-  "scope": "rule vs ten single-annotator development references; D09 reannotation pending; no heldout/model quality claim"
+  "scope": "rule vs ten frozen v1 single-annotator development references; D09 reannotation retained separately; no heldout/model quality claim"
 }

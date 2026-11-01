@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-30T19:17:18.674485+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/run_local_pipeline.py": "2c597440b06ce73f3ac8d8580e2f0166cc71aeee96620b896f46c4b9877933db",
+    "algorithm/examples/local-cases.jsonl": "cb88d338f4e7ef9eaaffea61b51efd42a46d6e90647c7aff0a13c7373ecd4e38"
+  },
+  "actual_results": "3项测试通过；10条无害输入均有结构化记录；4完成、2候选拒绝、3 Unknown、1 False；新增集成探针验证调用前Pre与异常工具字段停止。",
+  "limitations": "固定策略目标与内存工具；guard不可用零调用；状态冲突停止不伪造执行事件。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

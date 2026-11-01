@@ -88,19 +88,26 @@ def run_budgeted_path(plan, adapter, budget, *, executor=None, observer_mode='fu
     Draft202012Validator(SCHEMA).validate(plan)
     executor = executor or MiniExecutor(); initial = executor.reset(); run_id = 'budgeted-' + uuid4().hex
     nodes = {s['step_id']: s for s in plan['steps']}; current = plan['entry']; seen = set(); results = []
-    reason = None
+    reason = None; history = []; tool_calls = 0
     while current != 'STOP':
         if current in seen or current not in nodes:
             reason = 'invalid_or_cyclic_successor'; break
         seen.add(current); step = nodes[current]
+        remaining = plan['budget']['max_calls'] - tool_calls
+        if remaining < 2:
+            reason = 'plan_tool_budget_exhausted'; break
         result = retry_step(step, adapter, executor=executor, observer_mode=observer_mode,
-                            meter=budget, reset=False, run_id=f'{run_id}:{len(results)+1}')
+                            meter=budget, reset=False, run_id=f'{run_id}:{len(results)+1}',
+                            max_tool_calls=min(8, remaining), history=history)
         results.append(result)
+        tool_calls += result['budget']['tool_calls']
+        history.extend(result['visible_history'])
         if result['stop_reason'] != 'completed': reason = result['stop_reason']; break
         current = step['success_next']
     return {'schema_version': 'budgeted-path-1.0', 'run_id': run_id, 'test_id': plan['test_id'],
             'path_id': plan['path_id'], 'initial_state': initial, 'steps': results,
             'final_state': deepcopy(executor.state), 'stop_reason': reason or 'path_completed',
+            'plan_tool_calls': tool_calls, 'plan_max_calls': plan['budget']['max_calls'],
             'ledger': budget.snapshot(), 'scope': 'local_fixed_policy_only'}
 
 

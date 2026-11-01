@@ -1,0 +1,167 @@
+{
+  "schema_version": "target-match-batch-1.0",
+  "accepted": [
+    {
+      "schema_version": "target-match-1.0",
+      "candidate": {
+        "source_id": "synthetic-booking",
+        "source_group_id": "synthetic-only",
+        "node_id": "synthetic:n0",
+        "path_id": "synthetic:p0",
+        "action": "view_result",
+        "object": {
+          "appointment_id": "appointment-001"
+        },
+        "resource_type": "appointments",
+        "required_effect": "read_only",
+        "subject": "synthetic-agent",
+        "required_state": [],
+        "description": "view result"
+      },
+      "agent_config_id": "mini-executor-d04-v1",
+      "constraint_instance": {
+        "subject": "synthetic-agent",
+        "resource_type": "appointments",
+        "required_state": []
+      },
+      "status": "compatible",
+      "reasons": [],
+      "score": 2
+    }
+  ],
+  "rejected": [
+    {
+      "schema_version": "target-match-1.0",
+      "candidate": {
+        "source_id": "synthetic-booking",
+        "source_group_id": "synthetic-only",
+        "node_id": "synthetic:n0",
+        "path_id": "synthetic:p1",
+        "action": "send_email",
+        "object": {
+          "appointment_id": "appointment-001"
+        },
+        "resource_type": "appointments",
+        "required_effect": "read_only",
+        "subject": "synthetic-agent",
+        "required_state": [],
+        "description": "view result"
+      },
+      "agent_config_id": "mini-executor-d04-v1",
+      "constraint_instance": {
+        "subject": "synthetic-agent",
+        "resource_type": "appointments",
+        "required_state": []
+      },
+      "status": "rejected",
+      "reasons": [
+        "tool_not_available"
+      ],
+      "score": null
+    },
+    {
+      "schema_version": "target-match-1.0",
+      "candidate": {
+        "source_id": "synthetic-booking",
+        "source_group_id": "synthetic-only",
+        "node_id": "synthetic:n0",
+        "path_id": "synthetic:p2",
+        "action": "view_result",
+        "object": {
+          "appointment_id": "appointment-001"
+        },
+        "resource_type": "appointments",
+        "required_effect": "read_only",
+        "subject": "other",
+        "required_state": [],
+        "description": "view result"
+      },
+      "agent_config_id": "mini-executor-d04-v1",
+      "constraint_instance": {
+        "subject": "synthetic-agent",
+        "resource_type": "appointments",
+        "required_state": []
+      },
+      "status": "rejected",
+      "reasons": [
+        "subject_mismatch_or_unknown"
+      ],
+      "score": null
+    },
+    {
+      "schema_version": "target-match-1.0",
+      "candidate": {
+        "source_id": "synthetic-booking",
+        "source_group_id": "synthetic-only",
+        "node_id": "synthetic:n0",
+        "path_id": "synthetic:p3",
+        "action": "view_result",
+        "object": {
+          "appointment_id": "missing"
+        },
+        "resource_type": "appointments",
+        "required_effect": "read_only",
+        "subject": "synthetic-agent",
+        "required_state": [],
+        "description": "view result"
+      },
+      "agent_config_id": "mini-executor-d04-v1",
+      "constraint_instance": {
+        "subject": "synthetic-agent",
+        "resource_type": "appointments",
+        "required_state": []
+      },
+      "status": "rejected",
+      "reasons": [
+        "resource_missing_or_state_unknown"
+      ],
+      "score": null
+    },
+    {
+      "schema_version": "target-match-1.0",
+      "candidate": {
+        "source_id": "synthetic-booking",
+        "source_group_id": "synthetic-only",
+        "node_id": "synthetic:n0",
+        "path_id": "synthetic:p4",
+        "action": "view_result",
+        "object": {
+          "appointment_id": "appointment-001"
+        },
+        "resource_type": "appointments",
+        "required_effect": "read_only",
+        "subject": "synthetic-agent",
+        "required_state": [
+          {
+            "collection": "appointments",
+            "resource_id": "appointment-001",
+            "field": "time",
+            "equals": "wrong"
+          }
+        ],
+        "description": "view result"
+      },
+      "agent_config_id": "mini-executor-d04-v1",
+      "constraint_instance": {
+        "subject": "synthetic-agent",
+        "resource_type": "appointments",
+        "required_state": [
+          {
+            "collection": "appointments",
+            "resource_id": "appointment-001",
+            "field": "time",
+            "equals": "wrong"
+          }
+        ]
+      },
+      "status": "rejected",
+      "reasons": [
+        "state_precondition_conflict"
+      ],
+      "score": null
+    }
+  ],
+  "budget": {
+    "external_calls": 0
+  }
+}

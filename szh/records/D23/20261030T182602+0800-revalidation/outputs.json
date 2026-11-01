@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.680201+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/retry_policy.py": "e11fdb6ad0be52d5b867243b3f9e52919ae933ae50856defdb964d0b65fb9746"
+  },
+  "actual_results": "3项测试通过；拒绝、观察不足、超时三类分别停止，生成次数1/1/3；历史不覆盖，并跨步传递经过滤的可见工具结果。",
+  "limitations": "不将before/after/final_state或Oracle隐藏状态送入生成视图；只验证有限本地重试策略。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

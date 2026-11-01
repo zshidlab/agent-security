@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-30T18:32:32.194765+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "algorithm/tests/test_d13_model_extract.py",
+    "algorithm/tests/test_deepseek_adapter.py",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": ".....                                                                    [100%]\n5 passed in 0.18s\n",
+  "stderr": ""
+}

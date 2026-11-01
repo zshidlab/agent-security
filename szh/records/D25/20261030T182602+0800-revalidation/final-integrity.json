@@ -1,0 +1,18 @@
+{
+  "timestamp": "2026-10-30T19:17:18.900194+08:00",
+  "workbook_sha256": "98202033fe16bbfb474b53a754b2efb78d0217576e6ee3691609199d26352071",
+  "authorized_rows_updated": 14,
+  "protected_cells_and_other_zip_parts_unchanged": true,
+  "reopened_values_verified": true,
+  "source_and_overview_formulas_passed": true,
+  "audit": {
+    "timestamp": "2026-10-30T19:17:20.270332+08:00",
+    "files_scanned_for_exact_supplied_key": 1064,
+    "credential_occurrences_outside_config": 0,
+    "config_ignored": true,
+    "config_tracked": false,
+    "formal_files_checked_not_ignored": 209,
+    "new_workspace_gitignore": false,
+    "scope": "Exact supplied credential scanned in workspace bytes; no secret or secret hash reported."
+  }
+}

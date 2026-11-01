@@ -26,3 +26,13 @@ def test_writer_permission_and_unknown_state_fail_closed():
     r=match([c],cap(),{'subject':'other','state':INITIAL_STATE})
     assert 'permission_denied' in r['rejected'][0]['reasons']
     assert match([synthetic_candidate()],cap(),{'subject':'synthetic-agent','state':None})['rejected']
+def test_nonobject_arguments_retained_without_losing_next_candidate():
+    import json
+    from reference_graphs import ROOT
+    from mini_executor import INITIAL_STATE
+    from match_target import match,synthetic_candidate
+    cap=json.loads((ROOT/'data/目标能力.json').read_text(encoding='utf8'))
+    result=match([synthetic_candidate(object=None),synthetic_candidate(node_id='valid')],cap,
+                 {'subject':'synthetic-agent','state':INITIAL_STATE})
+    assert len(result['accepted'])==len(result['rejected'])==1
+    assert 'parameter_schema_incompatible' in result['rejected'][0]['reasons']

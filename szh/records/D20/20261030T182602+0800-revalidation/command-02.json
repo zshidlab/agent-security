@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T18:34:57.027849+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "D:\\anaconda\\python.exe",
+    "-B",
+    "algorithm/src/check_step.py",
+    "--output",
+    "records\\D20\\20261030T182602+0800-revalidation\\check_step.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"examples\": 6, \"matched\": 6}\n",
+  "stderr": ""
+}

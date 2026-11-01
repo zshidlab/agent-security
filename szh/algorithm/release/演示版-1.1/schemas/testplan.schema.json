@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:oapt-a:testplan:1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "test_id", "task_id", "path_id", "source_id", "entry", "steps", "budget", "stop_conditions", "scope"],
+  "properties": {
+    "schema_version": {"const": "testplan-1.0"},
+    "test_id": {"type": "string", "minLength": 1},
+    "task_id": {"type": "string", "minLength": 1},
+    "path_id": {"type": "string", "minLength": 1},
+    "source_id": {"type": "string", "minLength": 1},
+    "entry": {"type": "string", "minLength": 1},
+    "scope": {"const": "local_synthetic_only"},
+    "stop_conditions": {"type": "array", "minItems": 1, "items": {"enum": ["budget_exhausted", "False", "Unknown", "invalid_evidence"]}},
+    "budget": {"type": "object", "additionalProperties": false, "required": ["max_calls", "external_calls"], "properties": {"max_calls": {"type": "integer", "minimum": 1, "maximum": 100}, "external_calls": {"const": 0}}},
+    "steps": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/step"}}
+  },
+  "$defs": {
+    "condition": {
+      "type": "object", "additionalProperties": false,
+      "required": ["kind", "collection", "resource_id", "field", "equals"],
+      "properties": {"kind": {"enum": ["state_equals", "state_changed_to"]}, "collection": {"const": "appointments"}, "resource_id": {"type": "string", "minLength": 1}, "field": {"const": "time"}, "equals": {"type": "string", "minLength": 1}}
+    },
+    "step": {
+      "type": "object", "additionalProperties": false,
+      "required": ["step_id", "source_id", "source_group_id", "graph_node_id", "path_id", "test_id", "task_id", "agent_config_id", "tool", "arguments", "constraint_instance", "contract", "confirmation", "success_next", "false_next", "unknown_next", "wait_seconds", "max_retries"],
+      "properties": {
+        "step_id": {"type": "string", "minLength": 1}, "source_id": {"type": "string", "minLength": 1}, "source_group_id": {"type": "string", "minLength": 1},
+        "graph_node_id": {"type": "string", "minLength": 1}, "path_id": {"type": "string", "minLength": 1}, "test_id": {"type": "string", "minLength": 1}, "task_id": {"type": "string", "minLength": 1},
+        "agent_config_id": {"type": "string", "minLength": 1}, "tool": {"enum": ["read_notification", "read_file", "modify_appointment", "view_result"]},
+        "arguments": {"type": "object"}, "constraint_instance": {"type": "object"},
+        "confirmation": {"enum": ["observable", "cannot_automatically_confirm"]},
+        "success_next": {"type": "string", "minLength": 1}, "false_next": {"const": "STOP"}, "unknown_next": {"const": "STOP"},
+        "wait_seconds": {"type": "number", "minimum": 0, "maximum": 60}, "max_retries": {"type": "integer", "minimum": 0, "maximum": 3},
+        "contract": {"type": "object", "additionalProperties": false, "required": ["Pre", "Goal", "Invariant", "Observe", "Post"], "properties": {
+          "Pre": {"type": "array", "items": {"type": "object"}}, "Goal": {"type": "object"}, "Invariant": {"type": "array", "items": {"type": "string"}},
+          "Observe": {"type": "array", "items": {"$ref": "#/$defs/condition"}}, "Post": {"type": "array", "items": {"$ref": "#/$defs/condition"}}
+        }}
+      }
+    }
+  }
+}

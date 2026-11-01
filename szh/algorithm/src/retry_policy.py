@@ -6,7 +6,7 @@ from pathlib import Path
 from uuid import uuid4
 from mini_executor import MiniExecutor
 from generate_one_step import generate_one_step, SURFACE
-from run_local_pipeline import local_target, demo_adapter, RefusingExecutor
+from run_local_pipeline import local_target, demo_adapter, RefusingExecutor, preflight
 from build_step_table import synthetic_plan
 from judgment_examples import bind_event
 from check_step import check_step
@@ -15,7 +15,7 @@ from budget import BudgetExceeded
 
 def retry_step(step, adapter, *, executor=None, max_candidates=3, max_observations=3,
                max_tool_calls=8, observer_mode='full', recover_observation=False, run_id=None,
-               meter=None, reset=True):
+               meter=None, reset=True, history=None):
     for value, upper in ((max_candidates, 3), (max_observations, 3), (max_tool_calls, 100)):
         if type(value) is not int or not 1 <= value <= upper:
             raise ValueError('invalid_finite_budget')
@@ -30,7 +30,13 @@ def retry_step(step, adapter, *, executor=None, max_candidates=3, max_observatio
               'limits': {'candidates': max_candidates, 'observations_per_candidate': max_observations,
                          'tool_calls': max_tool_calls}, 'stop_reason': None}
     parent = None
+    history = deepcopy(history or [])
+    record['visible_history'] = []
     for number in range(1, max_candidates + 1):
+        gate = preflight(step, executor.state, guard_available=observer_mode != 'guard_unavailable')
+        record['preflight'] = gate
+        if not gate['allowed']:
+            record['stop_reason'] = gate['reason']; break
         if meter:
             try: meter.start_round(step['step_id'])
             except BudgetExceeded as exc:
@@ -40,7 +46,7 @@ def retry_step(step, adapter, *, executor=None, max_candidates=3, max_observatio
         candidate_id = f'{run_id}:c{number}'
         def metered_adapter(view):
             return meter.call('generation', adapter, view, reference=candidate_id) if meter else adapter(view)
-        candidate = generate_one_step(step, [], SURFACE, metered_adapter, candidate_id=candidate_id)
+        candidate = generate_one_step(step, history, SURFACE, metered_adapter, candidate_id=candidate_id)
         if 'adapter_error:BudgetExceeded' not in candidate['reasons']:
             record['budget']['generation_calls'] += 1
         attempt = {'attempt_id': f'{run_id}:a{number}', 'parent_candidate_id': parent,
@@ -54,6 +60,9 @@ def retry_step(step, adapter, *, executor=None, max_candidates=3, max_observatio
                 attempt['classification'] = 'safety_rejection'; record['stop_reason'] = 'safety_rejection'; break
             attempt['classification'] = 'technical_failure'
             continue
+        attempt['preflight'] = preflight(step, executor.state, guard_available=observer_mode != 'guard_unavailable')
+        if not attempt['preflight']['allowed']:
+            record['stop_reason'] = attempt['preflight']['reason']; break
         executor.state[SURFACE['kind']][SURFACE['resource_id']][SURFACE['field']] = candidate['candidate']['text']
         try:
             read = (meter.call('target', executor.read_notification, SURFACE['resource_id'], reference=candidate_id)
@@ -62,15 +71,19 @@ def retry_step(step, adapter, *, executor=None, max_candidates=3, max_observatio
             before = deepcopy(executor.state)
             event = (meter.call('target', local_target, executor, read['result']['body'], reference=candidate_id)
                      if meter else local_target(executor, read['result']['body']))
+            record['budget']['tool_calls'] += 1
         except BudgetExceeded as exc:
             attempt['classification'] = 'unexecuted_candidate_budget'
             record['stop_reason'] = 'budget:' + str(exc); break
         call_id = f'{run_id}:call{number}'
         if event is not None:
-            record['budget']['tool_calls'] += 1
             event = bind_event(step, event, evidence_id=f'{run_id}:e{number}')
             event.update(before=before, after=deepcopy(executor.state), call_id=call_id, run_id=run_id)
         attempt['event'] = deepcopy(event)
+        visible = {'visibility': 'visible', 'event_id': call_id + ':visible', 'role': 'tool',
+                   'text': json.dumps({'tool': event.get('tool'), 'result': event.get('result'),
+                                       'error': event.get('error')} if event else {'status': 'no_tool_result'}, ensure_ascii=False)}
+        history.append(visible); record['visible_history'].append(visible)
         for observation_number in range(1, max_observations + 1):
             evidence = deepcopy(event)
             if evidence is not None:

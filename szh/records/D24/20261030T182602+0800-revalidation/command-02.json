@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-10-30T18:33:32.988054+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/probe_runtime.py",
+    "--runtime",
+    "algorithm/src",
+    "--output",
+    "records/D24/20261030T182602+0800-revalidation/source-integration.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"all_passed\": true, \"runtime\": \"algorithm\\\\src\"}\n",
+  "stderr": ""
+}

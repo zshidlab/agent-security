@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.654866+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/check_step.py": "91dab90db23a19c30dc3c34bcca6951d24c41673c7b86c496333b5ad1bf8c04f"
+  },
+  "actual_results": "3项测试通过；6例命令输出全部匹配预期，错资源/错工具/错轮次不推进，缺失冲突失败关闭。",
+  "limitations": "只依据同轮同资源独立证据推进；Unknown不等于Safe。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

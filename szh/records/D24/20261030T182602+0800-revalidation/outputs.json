@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.685189+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/budget.py": "34ebbe31dc8ce7b08164c37a1334265aa869c6a56050ef08d408b12515e4ee9c"
+  },
+  "actual_results": "4项单测及4项历史反例通过；新集成探针通过：计划max_calls=2仅调用2次，第二次写入Pre冲突在写入前停止，可见历史存在且无隐藏快照。",
+  "limitations": "历史Pre诊断依赖event.before，现正确停止event=None，改以新探针验证更强的调用前拦截；原测试不改。一次-k拼写错误exit5原样保留，改正后4通过1未选；预调用耗时门禁不取消已运行调用。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

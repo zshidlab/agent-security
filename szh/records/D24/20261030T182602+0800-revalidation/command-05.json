@@ -1,0 +1,19 @@
+{
+  "timestamp": "2026-10-30T18:36:07.826588+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "-m",
+    "pytest",
+    "-p",
+    "no:cacheprovider",
+    "docs/records/20261017T113553+0800-d06-d25-review/test_review_boundaries.py",
+    "-k",
+    "not state_precondition",
+    "-q"
+  ],
+  "exit_code": 0,
+  "stdout": "....                                                                     [100%]\n4 passed, 1 deselected in 0.17s\n",
+  "stderr": ""
+}

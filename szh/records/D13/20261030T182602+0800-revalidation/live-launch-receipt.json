@@ -1,0 +1,20 @@
+{
+  "receipt_type": "Observed tool completion; not captured subprocess stdout",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/run_d13_live.py",
+    "--config",
+    "配置文档.md",
+    "--output",
+    "records/D13/20261030T182602+0800-revalidation/live-attempt-01"
+  ],
+  "tool_session_id": 43012,
+  "observed_exit_code": 0,
+  "evidence": [
+    "live-attempt-01/extractions.jsonl",
+    "live-attempt-01/summary.json",
+    "live-evidence-check.json"
+  ],
+  "note": "Historical live command completion observed in this session; no paid calls repeated to reconstruct capture."
+}

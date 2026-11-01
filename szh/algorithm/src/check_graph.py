@@ -31,6 +31,8 @@ def check_graph(graph, trace):
         q=events.get(n.get('request_event_id'))
         if q is None or q['kind']!='request' or n.get('action')!=q['tool'] or n.get('object')!=q['args'] or q['event_id'] not in refs:
             errors.append({'code':'request_action_mismatch','at':nid})
+        if q and n.get('message_index') != q['message_index']:
+            errors.append({'code':'request_position_mismatch','at':nid})
         for r in n.get('result_event_ids',[]):
             e=events.get(r)
             if not e or not q or e['kind']!='result' or not q['call_key'] or q['call_key']!=e['call_key'] or e['message_index']<=q['message_index'] or e['missing_reason']:
@@ -42,7 +44,8 @@ def check_graph(graph, trace):
         edge_ids.add(eid)
         a,b=nodes.get(e.get('from')),nodes.get(e.get('to'))
         if not a or not b: errors.append({'code':'missing_endpoint','at':eid});continue
-        ai,bi=a.get('message_index'),b.get('message_index')
+        aq,bq=events.get(a.get('request_event_id')),events.get(b.get('request_event_id'))
+        ai,bi=(aq.get('message_index') if aq else None),(bq.get('message_index') if bq else None)
         if ai is None or bi is None or ai>=bi:
             errors.append({'code':'wrong_direction_or_parallel','at':eid});e['status']='Invalid';continue
         if e.get('kind') not in ('temporal','dependency'): errors.append({'code':'unknown_edge_kind','at':eid});continue
@@ -53,7 +56,8 @@ def check_graph(graph, trace):
             valid=valid and any(quote in json.dumps(events[r].get('content'),ensure_ascii=False) for r in refs) and quote in json.dumps(b.get('object'),ensure_ascii=False)
             e['status']='supported' if valid else 'candidate'
             if not valid: warnings.append({'code':'missing_dependency_support','at':eid,'refs':refs})
-        elif not refs or any(r not in events for r in refs): errors.append({'code':'missing_temporal_evidence','at':eid})
+        elif not refs or any(r not in events for r in refs) or set(refs)!={a.get('request_event_id'),b.get('request_event_id')}:
+            errors.append({'code':'missing_or_wrong_temporal_evidence','at':eid})
         else: e['status']='supported_order_only'
     return {'schema_version':'graph-check-1.0','status':'Invalid' if errors or trace['status']=='Invalid' else 'Candidate' if warnings else 'Valid',
             'errors':errors,'warnings':warnings,'graph':g}

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T18:34:58.172761+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "D:\\anaconda\\python.exe",
+    "-B",
+    "algorithm/src/budget.py",
+    "--output",
+    "records\\D24\\20261030T182602+0800-revalidation\\budget.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"runs\": 2, \"stop_reasons\": [\"budget:target_budget\", \"path_completed\"], \"calls\": [2, 8]}\n",
+  "stderr": ""
+}

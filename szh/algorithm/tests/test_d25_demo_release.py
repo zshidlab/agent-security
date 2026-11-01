@@ -6,7 +6,7 @@ import subprocess
 import sys
 from reference_graphs import ROOT
 
-PACKAGE = ROOT / 'release/演示版'
+PACKAGE = ROOT / 'release/演示版-1.1'
 
 
 def test_frozen_hashes_match_local_source_and_full_inventory():
@@ -48,3 +48,18 @@ def test_changed_code_is_rejected_before_execution(tmp_path):
                               '--output-dir', str(output)], cwd=tmp_path, capture_output=True, text=True, encoding='utf8')
     assert process.returncode != 0 and 'package hash mismatch' in process.stderr
     assert not output.exists()
+
+
+def test_archived_release_inventory_is_preserved():
+    archived=ROOT/'release/演示版'
+    manifest=json.loads((archived/'release-manifest.json').read_text(encoding='utf8'))
+    assert {p.relative_to(archived).as_posix() for p in archived.rglob('*') if p.is_file() and p.name!='release-manifest.json'}==set(manifest['files'])
+    for relative,expected in manifest['files'].items():
+        assert hashlib.sha256((archived/relative).read_bytes()).hexdigest()==expected
+
+
+def test_corrected_runtime_boundaries_hold_in_frozen_package(tmp_path):
+    process=subprocess.run([sys.executable,'-B',str(ROOT.parent/'scripts/probe_runtime.py'),
+        '--runtime',str(PACKAGE/'src'),'--output',str(tmp_path/'probe.json')],capture_output=True,text=True,encoding='utf8')
+    assert process.returncode==0,process.stderr
+    assert json.loads((tmp_path/'probe.json').read_text(encoding='utf8'))['all_passed']

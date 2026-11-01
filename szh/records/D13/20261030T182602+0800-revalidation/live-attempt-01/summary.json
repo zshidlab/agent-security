@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-30T18:26:58.024581+08:00",
+  "model_requested": "deepseek-chat",
+  "inputs": 20,
+  "expected_inputs": 20,
+  "real_http_calls": 20,
+  "statuses": {
+    "Valid": 20
+  },
+  "usage": {
+    "prompt_tokens": 142735,
+    "completion_tokens": 8130,
+    "total_tokens": 150865,
+    "prompt_cache_hit_tokens": 2432,
+    "prompt_cache_miss_tokens": 140303
+  },
+  "actual_cost_usd": null,
+  "scope": "real model extraction, not target attack execution",
+  "all_inputs_called": true,
+  "all_responses_received": true
+}

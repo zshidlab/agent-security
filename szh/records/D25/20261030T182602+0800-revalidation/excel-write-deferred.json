@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-10-30T18:45:34.368982+08:00",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/finalize_revalidation.py",
+    "update"
+  ],
+  "observed_tool_exit_code": 1,
+  "exception": "Workbook lock file exists; do not bypass its owner",
+  "cells_written": 0,
+  "workbook_sha256": "c27c64a4d0430226902a81a4320973f13945aabde28a4a6334d8aa41b9d81b86",
+  "release_condition": "User saves and closes workbook; reread and verify sources before write",
+  "receipt_type": "Observed tool result, not reconstructed subprocess capture"
+}

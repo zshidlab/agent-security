@@ -13,6 +13,9 @@ def match(candidates, capability, context, score=None):
         else:
             args=c.get('object',{})
             if list(Draft202012Validator(tool['parameters']).iter_errors(args)): reasons.append('parameter_schema_incompatible')
+            # A malformed candidate is retained; never let it abort the batch.
+            if not isinstance(args,dict):
+                args={}
             if c.get('resource_type')!=tool['resource_type']: reasons.append('resource_type_mismatch_or_unknown')
             if c.get('required_effect')!=tool['effect']: reasons.append('effect_semantics_mismatch_or_unknown')
             if not context.get('subject') or c.get('subject')!=context.get('subject'): reasons.append('subject_mismatch_or_unknown')

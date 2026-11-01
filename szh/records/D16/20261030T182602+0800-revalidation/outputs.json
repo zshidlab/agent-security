@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-30T19:17:18.627508+08:00",
+  "deliverables_sha256": {
+    "algorithm/data/目标能力.json": "216d1da65a26253c0a8f0bf00ec918b63a94180809d06cf2d0db8289e159c9e5",
+    "algorithm/schemas/capability.schema.json": "fd81cdf054a41c9cd05f519b9658c2cd9ebd771a25e8e078f2db702b2c0107eb"
+  },
+  "actual_results": "3项测试通过；能力文件与微型执行器四工具一致，权限/资源/观察效果显式化，无取消预约工具。",
+  "limitations": "仅合成预约目标；实际平台/车辆能力未接入。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

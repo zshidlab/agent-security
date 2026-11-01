@@ -10,7 +10,7 @@ MATCHING={'schema_version':'graph-matching-1.0','node_key':['source_id','origina
  'relations':'directed endpoint node keys and exact edge kind; temporal and dependency separate',
  'precision':'TP/(TP+FP)','recall':'TP/(TP+FN)','F1':'2TP/(2TP+FP+FN)',
  'zero_denominator':'null/undefined, including empty graphs; retain all counts',
- 'scope':'rule vs ten single-annotator development references; D09 reannotation pending; no heldout/model quality claim'}
+ 'scope':'rule vs ten frozen v1 single-annotator development references; D09 reannotation retained separately; no heldout/model quality claim'}
 
 def metrics(tp,fp,fn):
     return {'tp':tp,'fp':fp,'fn':fn,'precision':tp/(tp+fp) if tp+fp else None,
@@ -47,5 +47,5 @@ if __name__=='__main__':
     with (out/'图抽取初测.csv').open('w',encoding='utf8',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
     (out/'graph-errors.jsonl').write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in errors),encoding='utf8')
-    (out/'graph-evaluation-notes.md').write_text('# 抽取初测限制\n\n仅规则方法对十条单人参考开发图。节点按请求位置、调用序号、动作和参数精确匹配；关系按类型和有向端点。原始计数见 CSV，公式和零分母约定见 graph-matching-v1.json，错误原文位置见 graph-errors.jsonl。D09 隔日自查尚未执行，参考有标注偏差；D13 真实模型未调用，未评模型质量。未使用留出，不得据此宣称方法优越或真实攻击成功。\n',encoding='utf8')
+    (out/'graph-evaluation-notes.md').write_text('# 抽取初测限制\n\n仅规则方法对十条冻结 v1 单人参考开发图。节点按请求位置、调用序号、动作和参数精确匹配；关系按类型和有向端点。原始计数见 CSV，公式和零分母约定见 graph-matching-v1.json，错误原文位置见 graph-errors.jsonl。D09 于2026-10-30完成隔日单人重标，两条关系判断改变，首版参考未覆盖，标注偏差仍存在。D13 已完成20条真实 DeepSeek 抽取，响应证据独立保存在 records/D13；本 CSV 仍仅是规则方法统计，没有把真实模型调用成功当成模型质量或真实攻击成功。未使用留出，不得据此宣称方法优越。\n',encoding='utf8')
     print(json.dumps({'graphs':10,'rows':len(rows),'errors':len(errors),'totals':{kind:{k:sum(r[k] for r in rows if r['kind']==kind) for k in ['tp','fp','fn']} for kind in ['node','temporal','dependency']}}))

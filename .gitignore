@@ -23,3 +23,5 @@ htmlcov/
 # 临时输出
 *.tmp
 *.temp
+
+配置文档.md

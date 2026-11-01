@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-30T18:29:21.431447+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/reannotate_d09.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"reviewed\": 5, \"changed_sources\": 2, \"min_elapsed_hours\": 326.942829995}\n",
+  "stderr": ""
+}

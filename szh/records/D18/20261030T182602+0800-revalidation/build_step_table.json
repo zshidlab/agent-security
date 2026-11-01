@@ -1,0 +1,81 @@
+{
+  "schema_version": "testplan-1.0",
+  "test_id": "synthetic-test-001",
+  "task_id": "synthetic-task-001",
+  "path_id": "synthetic:p0",
+  "source_id": "synthetic-booking",
+  "entry": "synthetic:n0",
+  "steps": [
+    {
+      "step_id": "synthetic:n0",
+      "source_id": "synthetic-booking",
+      "source_group_id": "synthetic-only",
+      "graph_node_id": "synthetic:n0",
+      "path_id": "synthetic:p0",
+      "test_id": "synthetic-test-001",
+      "task_id": "synthetic-task-001",
+      "agent_config_id": "mini-executor-d04-v1",
+      "tool": "modify_appointment",
+      "arguments": {
+        "appointment_id": "appointment-001",
+        "new_time": "2026-10-23T14:00:00+08:00",
+        "subject": "synthetic-agent"
+      },
+      "constraint_instance": {
+        "subject": "synthetic-agent",
+        "resource_type": "appointments",
+        "required_state": []
+      },
+      "contract": {
+        "Pre": [],
+        "Goal": {
+          "tool": "modify_appointment",
+          "arguments": {
+            "appointment_id": "appointment-001",
+            "new_time": "2026-10-23T14:00:00+08:00",
+            "subject": "synthetic-agent"
+          }
+        },
+        "Invariant": [
+          "same_task_resource_subject",
+          "fail_closed_on_missing_evidence"
+        ],
+        "Observe": [
+          {
+            "kind": "state_changed_to",
+            "collection": "appointments",
+            "resource_id": "appointment-001",
+            "field": "time",
+            "equals": "2026-10-23T14:00:00+08:00"
+          }
+        ],
+        "Post": [
+          {
+            "kind": "state_changed_to",
+            "collection": "appointments",
+            "resource_id": "appointment-001",
+            "field": "time",
+            "equals": "2026-10-23T14:00:00+08:00"
+          }
+        ]
+      },
+      "confirmation": "observable",
+      "success_next": "STOP",
+      "false_next": "STOP",
+      "unknown_next": "STOP",
+      "wait_seconds": 0,
+      "max_retries": 1
+    }
+  ],
+  "budget": {
+    "max_calls": 8,
+    "external_calls": 0
+  },
+  "stop_conditions": [
+    "budget_exhausted",
+    "False",
+    "Unknown",
+    "invalid_evidence"
+  ],
+  "scope": "local_synthetic_only"
+}

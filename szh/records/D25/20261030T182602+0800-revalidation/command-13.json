@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T19:17:18.743311+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "git",
+    "diff",
+    "--check",
+    "--",
+    "."
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "warning: in the working copy of 'szh/TASK.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/README.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/src/budget.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/src/check_graph.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/src/evaluate_graph.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/src/match_target.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/src/retry_policy.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/src/run_local_pipeline.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/tests/test_d09_annotation_refs.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/tests/test_d14_check_graph.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/tests/test_d17_match_target.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/tests/test_d25_demo_release.py', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/algorithm/说明/如何划分步骤.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'szh/scripts/build_demo_release.py', LF will be replaced by CRLF the next time Git touches it\n"
+}

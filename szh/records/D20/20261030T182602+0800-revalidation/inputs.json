@@ -1,0 +1,14 @@
+{
+  "day": "D20",
+  "started": "2026-10-30T18:26:02.484988+08:00",
+  "python": "3.12.7 | packaged by Anaconda, Inc. | (main, Oct  4 2024, 13:17:27) [MSC v.1929 64 bit (AMD64)]",
+  "authority": "User authorized D09/D13 closure and sequential D14-D25 revalidation; workbook writes only after ALL acceptance passes.",
+  "schema": "daily-revalidation-1.0",
+  "source_block": 344,
+  "input_hashes": {
+    "docs\\tasks\\D20.md": "0d23299ae355ac39b1e29e26dc5b9ebbbcc19e37d50d86cab0b1fb4012cda13f",
+    "docs\\tasks\\manifest.json": "c14f9d91429f40f8a315e153d8c0e34b186b9ea3d1269d2cbaae73207bafa11c",
+    "algorithm\\src\\check_step.py": "91dab90db23a19c30dc3c34bcca6951d24c41673c7b86c496333b5ad1bf8c04f"
+  },
+  "original_start_preserved": true
+}

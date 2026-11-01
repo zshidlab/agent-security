@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-10-30T18:42:22.686783+08:00",
+  "files_scanned_for_exact_supplied_key": 1040,
+  "credential_occurrences_outside_config": 0,
+  "config_ignored": true,
+  "config_tracked": false,
+  "formal_files_checked_not_ignored": 185,
+  "new_workspace_gitignore": false,
+  "scope": "Exact supplied credential scanned in workspace bytes; no secret or secret hash reported."
+}

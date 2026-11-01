@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-10-30T18:32:33.206288+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "python",
+    "-B",
+    "scripts/check_live_evidence.py"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"verified_inputs\": 20, \"real_http_calls\": 20, \"resolved_models\": {\"deepseek-flash\": 20}, \"usage\": {\"prompt_tokens\": 142735, \"completion_tokens\": 8130, \"total_tokens\": 150865, \"prompt_cache_hit_tokens\": 2432, \"prompt_cache_miss_tokens\": 140303}, \"graph_checks\": {\"rule\": {\"Valid\": 18, \"Invalid\": 2}, \"real_deepseek_api\": {\"Valid\": 18, \"Invalid\": 2}}, \"invalid_policy\": \"Preserve ambiguous input bindings; do not promote to Valid.\", \"scope\": \"Model extraction and graph integrity, not observed target attack effects.\"}\n",
+  "stderr": ""
+}

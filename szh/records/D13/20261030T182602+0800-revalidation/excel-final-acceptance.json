@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-10-30T19:16:49.006907+08:00",
+  "workbook": "E:\\Vehicle-Agent-Security\\agent-security\\OAPT_研究方案进度管理_三人员分表与总览甘特图.xlsx",
+  "row": 17,
+  "source_A_N": {
+    "工作日编号": 13,
+    "计划开始日期": "2026-11-04",
+    "计划结束日期": "2026-11-04",
+    "来源块": "A:block-260",
+    "原文日标题": "第3周 第13天 加入语言模型辅助抽取",
+    "任务名称/当天操作": "第3周 第13天 加入语言模型辅助抽取\n1. 把每段原文与需要填写的字段发给模型。\n2. 要求输出步骤及证据编号。\n3. 先用格式检查程序读结果。\n4. 对不存在的证据编号直接拒收并保留原回复。",
+    "本周目标": "实现步骤抽取与证据检查",
+    "当天类型": "算法研究",
+    "阅读/参考（原文）": "JSON Schema Draft 2020 12；PROV O The PROV Ontology",
+    "开始前准备": "规则结果和20条开发轨迹。",
+    "预期结果": "模型生成了不存在的第99条事件，该节点被拒收。",
+    "当天保存": "src/model_extract.py。另保存当天的实际命令和执行记录。",
+    "验收标准": "每次调用和解析失败有记录，格式修复最多两次。",
+    "失败处理": ""
+  },
+  "before_O_U": [
+    "阻塞",
+    75,
+    "2026-10-17",
+    "",
+    "algorithm/src/model_extract.py; algorithm/data/model-replies-fixture.jsonl",
+    "records/D13/20261017T033733+0800-first; checks.md; command-*.json",
+    "2026-10-17发现：当前禁止凭据访问，尚无明确授权的兼容真实模型运行方式；解除需获该方式授权并真实运行20条、保存调用证据。fixture仅控制流；D09隔日复查待完成，B/C不变。"
+  ],
+  "saved_reopened_O_U": [
+    "已完成",
+    100,
+    "2026-10-17",
+    "2026-10-30",
+    "algorithm/src/model_extract.py; algorithm/data/model-replies-fixture.jsonl",
+    "原阻塞2026-10-17：无真实模型调用；2026-10-30解除：20次DeepSeek HTTP响应/usage、原回复和检查齐全；records/D13/20261030T182602+0800-revalidation; checks.md; commands.md; command-*.json; outputs.json",
+    "2026-10-30补验/修复完成；原开始日期保留，源计划日期不变。请求deepseek-chat，服务返回deepseek-flash；150865 tokens，实际费用未提供。AL-005/AL-007原始返回绑定歧义保持Invalid。事件99拒收是注入反例，不是本次模型实际幻觉；未执行真实目标攻击。 B/C接口无变更。"
+  ],
+  "protected_A_cells_unchanged": true,
+  "other_zip_entries_byte_identical": true,
+  "all_source_and_overview_formulas_verified": true,
+  "before_sha256": "b18298cbb0674f75527ee0c1d6e56ee3524598895df6c022ff99f652da2a3143",
+  "after_sha256": "da0df27109f77f23c8913bec88733c8ad7b85a938ed36518f1ab14bd06126a59",
+  "date_note": "Actual execution date; plan dates unchanged"
+}

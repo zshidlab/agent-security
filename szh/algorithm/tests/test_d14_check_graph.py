@@ -29,3 +29,9 @@ def test_wrong_action_and_foreign_event_rejected():
     t,g=sample();g['nodes'][0]['action']='delete';g['nodes'][0]['evidence_refs'].append('other:e99')
     codes={e['code'] for e in check_graph(g,t)['errors']}
     assert {'request_action_mismatch','missing_or_foreign_evidence'}<=codes
+
+def test_forged_positions_and_unrelated_temporal_evidence_rejected():
+    t,g=sample();g['nodes'][0]['message_index']=99
+    assert check_graph(g,t)['status']=='Invalid'
+    t,g=sample();g['edges'][0]['evidence_refs']=['unrelated:e99']
+    assert any(e['code']=='missing_or_wrong_temporal_evidence' for e in check_graph(g,t)['errors'])

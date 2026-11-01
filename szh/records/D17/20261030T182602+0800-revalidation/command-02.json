@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T18:34:56.045442+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "D:\\anaconda\\python.exe",
+    "-B",
+    "algorithm/src/match_target.py",
+    "--output",
+    "records\\D17\\20261030T182602+0800-revalidation\\match_target.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"compatible\": 1, \"rejected\": 4}\n",
+  "stderr": ""
+}

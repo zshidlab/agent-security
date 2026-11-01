@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-30T18:47:10.892556+08:00",
+  "acceptance_passed": true,
+  "excel_written": false,
+  "workbook_matches_before": true,
+  "lock_exists": true,
+  "audit": {
+    "timestamp": "2026-10-30T18:47:11.493115+08:00",
+    "files_scanned_for_exact_supplied_key": 1044,
+    "credential_occurrences_outside_config": 0,
+    "config_ignored": true,
+    "config_tracked": false,
+    "formal_files_checked_not_ignored": 189,
+    "new_workspace_gitignore": false,
+    "scope": "Exact supplied credential scanned in workspace bytes; no secret or secret hash reported."
+  }
+}

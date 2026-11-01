@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.615725+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/check_graph.py": "06db74113e1f99b186ae3d9bc2a08ebbead228ae8d3056544de4675a0bd85004"
+  },
+  "actual_results": "4项测试通过：空证据、重复节点、逆序、伪造节点位置/端点证据均受检；真实与规则图各18 Valid、2 Invalid。",
+  "limitations": "顺序从原始请求事件推导；歧义输入拒绝，不静默修复；图Valid不等于效果成立。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}

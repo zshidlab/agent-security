@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-30T18:34:56.684534+08:00",
+  "cwd": "E:\\Vehicle-Agent-Security\\agent-security\\szh",
+  "argv": [
+    "D:\\anaconda\\python.exe",
+    "-B",
+    "algorithm/src/judgment_examples.py",
+    "--output",
+    "records\\D19\\20261030T182602+0800-revalidation\\judgment_examples.jsonl"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"examples\": 6, \"labels\": [\"True\", \"False\", \"Unknown\", \"Unknown\", \"Unknown\", \"Unknown\"]}\n",
+  "stderr": ""
+}

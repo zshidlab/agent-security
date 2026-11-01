@@ -11,6 +11,16 @@ def test_initial_annotations_refer_to_actual_messages():
         assert validate_reference(g,json.loads((ROOT/g['source_file']).read_text(encoding='utf8')))
         assert not review_status(row)['complete']
 
+def test_second_annotation_has_real_interval_and_valid_raw_references():
+    rows=[json.loads(x) for x in (ROOT/'data/标注自查.jsonl').read_text(encoding='utf8').splitlines()]
+    assert len(rows)==5
+    for row in rows:
+        second=row['second_annotation']
+        assert review_status(row,second)['complete']
+        assert validate_reference(second['graph'],json.loads((ROOT/second['graph']['source_file']).read_text(encoding='utf8')))
+        assert all(n['axes']['effect']=='Unknown' for n in second['graph']['nodes'])
+        assert 'not human gold' in second['limitations']
+
 def test_real_gate_does_not_accept_same_day_or_missing_review():
     # Synthetic unit times test the gate only; no fabricated real second annotation.
     a={'source_id':'synthetic','annotated_at':'2026-10-17T01:00:00+08:00','graph':{'nodes':[]}}

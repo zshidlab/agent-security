@@ -113,7 +113,7 @@ def build(output):
     (output / 'requirements.txt').write_text(''.join(f'{name}=={version}\n' for name, version in packages.items()), encoding='utf8')
     (output / 'environment.json').write_text(json.dumps({'python': platform.python_version(),
          'dependencies': packages, 'installation_note': 'Verified with existing installed packages; clean installation is not claimed.'}, indent=2) + '\n', encoding='utf8')
-    (output / 'README.md').write_text('''# OAPT_A D25 演示版 1.0
+    (output / 'README.md').write_text('''# OAPT_A D25 演示版 1.1
 
 这是可独立运行的 local_mock 包；只用合成通知与内存预约，不连接模型或真实系统。
 固定策略刻意将合成文本命令映射到两个本地工具，用于验证生成→执行→独立观察→三值判断。
@@ -133,12 +133,13 @@ python -I -B demo.py --case unknown --output-dir <第三个新的外部输出目
 费用是离线模拟单位，真实 token/美元成本未知。耗时门禁只能拒绝后续调用，不能取消已运行的适配器。
 
 责任：OAPT_A/szh；接口：testplan-1.0 / capability-1.0 / step-judgment-1.0；未更改 B/C 共享接口。
-D09 的隔日至少24小时重标、D13 的真实模型抽取仍未完成；本包不代替这些源验收。
+D09 的跨日重标和 D13 的真实模型抽取证据见工作区 records；本包仍保持离线演示。
+1.1 修复执行前 Pre 门禁、跨步骤计划预算、畸形命令和可见历史传递；旧 1.0 包及其失败证据保留。
 只冻结本地闭环需要的代码；不含真实模型、凭据、上游轨迹数据或留出集。
 ''', encoding='utf8')
     files = {p.relative_to(output).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
              for p in sorted(output.rglob('*')) if p.is_file()}
-    manifest = {'schema_version': 'demo-release-1.0', 'release_id': 'OAPT_A-D25-local-demo-1.0',
+    manifest = {'schema_version': 'demo-release-1.0', 'release_id': 'OAPT_A-D25-local-demo-1.1',
                 'created_at': datetime.now().astimezone().isoformat(), 'maintainer': 'OAPT_A/szh',
                 'source_plan': 'A:block-404..415', 'source_code_hashes': source_hashes,
                 'files': files, 'scope': 'local_mock; real_model_calls=0',

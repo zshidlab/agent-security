@@ -1,0 +1,11 @@
+{
+  "python": "3.12.7",
+  "dependencies": {
+    "jsonschema": "4.23.0",
+    "attrs": "23.1.0",
+    "jsonschema-specifications": "2023.7.1",
+    "referencing": "0.30.2",
+    "rpds-py": "0.10.6"
+  },
+  "installation_note": "Verified with existing installed packages; clean installation is not claimed."
+}

@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-10-30T19:17:18.667951+08:00",
+  "deliverables_sha256": {
+    "algorithm/src/generate_one_step.py": "3a32e70b2024f2cf07ddc4c26ad41fbca9cc28438c2cbe762fe52e8b65186f92"
+  },
+  "actual_results": "3项测试通过；4候选保留、1接受；输入视图只给当前目标、工具和可见历史，越界和格式拒绝保留。",
+  "limitations": "这里候选生成使用本地替身，真实模型调用为0；D13调用仅用于历史抽取。",
+  "result_axes": "Public extraction: request/attempt from original refs; independent effect/violated Unknown. Local execution axes, Contract and before/after in actual run JSON; not real target effects."
+}
